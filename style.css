@@ -17,9 +17,20 @@ a {
 }
 
 .container {
-     width: 90%;
+     /* border: 2px solid black; */
+     width: 86%;
      height: 100vh;
      margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+     .container {
+          /* border: 2px solid black; */
+          width: 86%;
+          max-width: 40%;
+          height: 100vh;
+          margin: 0 auto;
+     }
 }
 
 .phone-container {
@@ -90,7 +101,12 @@ a {
 }
 
 .number-container > div:nth-child(3) {
+     border: 2px solid black;
+     display: flex;
+     max-width: 360px;
+     flex-direction: row;
      margin-top: 40px;
+     border-radius: 10px;
 }
 
 .number-container > div:nth-child(4) {
@@ -103,7 +119,6 @@ a {
      display: flex;
      justify-content: center;
      align-items: center;
-
      color: white;  
      width: 40px;
      height: 40px;
@@ -113,14 +128,26 @@ a {
 
 
 .number-input {
-     border: 2px solid #1E2228;
+     /* border: 2px solid #1E2228; */
      border-radius: 10px;
-     width: 25em;
+     width: 80%;
+     max-width: 360px;
      height: 3.5em;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      font-size: 1.3em;
-     color: #DDDDDD;
+     color: #DDDDDD;     
      padding-left: 25px;
    }
+
+input {
+     border:0;
+     outline:0; 
+     box-shadow: none;
+     background-color: transparent;
+}
+
+input:focus {
+     outline:none!important;
+}
