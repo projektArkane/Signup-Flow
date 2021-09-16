@@ -35,7 +35,7 @@
                     <h1 class="page-heading">Verify your Number</h1>
                     <p class="description">Enter the 4-digit OTP we’ve sent to <span>8888888888</span></p>
                </div>
-               <div style="border: none;">
+               <div style="border: none; display: flex; flex-direction: column; align-items: flex-start;">
 
                     <form>
                          <input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)"/>
@@ -44,11 +44,13 @@
                          <input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)"/>
                      </form>
 
+                     <p style="padding-top: 20px;">Resend Code in <span> <strong>00:30</strong></span></p>
+
                </div>
 
                <div>
                     <a href="create-username.html">
-                         <div>
+                         <div style="position: relative; top: -20px;">
                               <i data-feather="arrow-right"></i>
                          </div>
                     </a>
