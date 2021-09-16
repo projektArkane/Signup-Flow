@@ -48,12 +48,17 @@ a {
      }
 
      .container {
-          /* border: 2px solid black; */
-          padding: 0 20px;
+          border: 2px solid grey;
+          border-radius: 30px;
+          padding: 20px 50px;
           width: 86%;
-          max-width: 40%;
+          max-width: 50%;
           height: 90vh;
           margin: auto;
+     }
+
+     .container > div:nth-child(2) > p{
+          width: 80%; 
      }
 }
 
@@ -117,7 +122,8 @@ a {
 }
 
 .number-container > div:nth-child(1) {
-     margin-top: 40px;
+     margin-top: 25px;
+     font-size: 1.3em;
 }
 
 .number-container > div:nth-child(2) {
@@ -127,11 +133,16 @@ a {
 .number-container > div:nth-child(3) {
      border: 2px solid black;
      display: flex;
+     align-items: center;
      max-width: 360px;
      flex-direction: row;
      margin-top: 40px;
      border-radius: 10px;
 }
+
+/* .number-container > div:nth-child(3) :focus {
+     border: 2px solid red;
+} */
 
 .number-container > div:nth-child(4) {
      display: flex;
@@ -139,7 +150,7 @@ a {
      margin-top: 90px;
 }
 
-.number-container > div:nth-child(4) >div {
+.number-container > div:nth-child(4) >a >div {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -160,18 +171,52 @@ a {
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-     font-size: 1.3em;
-     color: #DDDDDD;     
-     padding-left: 25px;
+     font-size: 1em;
+     color: #DDDDDD;
+     margin: auto 0;
+     padding-left: 5px;
    }
 
 input {
      border:0;
-     outline:0; 
+     outline:0;
+     padding-left: 10px;
      box-shadow: none;
      background-color: transparent;
+     font-size: 1em;
+     /* caret-color: transparent; */
 }
 
-input:focus {
+/* input:focus {
      outline:none!important;
+} */
+
+/* input[type="number"]
+{
+    transform: scale(1.2);
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+
+/* ========================================================= */
+
+input[type=number] {
+     height: 45px;
+     width: 45px;
+     font-size: 25px;
+     text-align: center;
+     border: 2px solid #EFEFF0;
+     border-radius: 5px;
+     margin-right: 10px;
+     padding: 0 2px;
+ }
+ input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
