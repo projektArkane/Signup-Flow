@@ -12,12 +12,6 @@ a {
      text-decoration: none;
 }
 
-/* .content {
-     height: 100%;
-     display: flex;
-     align-items: center;
-} */
-
 .fake-border {
      border: 1px solid black;
 }
@@ -30,7 +24,6 @@ a {
 }
 
 .container {
-     /* border: 2px solid black; */
      padding: 0 10px;
      width: 90%;
      height: 90%;
@@ -38,16 +31,8 @@ a {
 }
 
 @media (min-width: 640px) {
-
-     .content {
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-     }
-
      .container {
-          /* border: 2px solid grey; */
+          border: 2px solid grey;
           border-radius: 30px;
           padding: 20px 50px;
           width: 86%;
@@ -56,30 +41,28 @@ a {
           margin: auto;
      }
 
-     .container > div:nth-child(2) > p{
-          width: 80%; 
-     }
-
-     #start-page > div > h1 {
-          /* text-align: center; */
+     .btn {
           margin: 0 auto;
-          width: 50%;
-          text-align: center;
-     }
-
-     #start-page > div > p {
-          margin: 0 auto;
-          padding: 0px;
-          padding-top: 10px;
-          width: 60%;
-          text-align: center;
+          max-width: 70%;
      }
 }
 
-.phone-container {
+#start-page {
      display: flex;
      flex-direction: column;
      justify-content: space-around;
+     height: 90vh;
+}
+
+.page-heading {
+     font-size: 1.5em;
+     color: #1E2228;
+}
+
+.description {
+     margin-top: 12px;
+     font-size: 1em;
+     color: #1E2228;
 }
 
 .btn {
@@ -94,140 +77,212 @@ a {
      font-size: 1em;
      font-weight: 400;
      border-radius: 26px;
-     width: 20em;
-     height: 3em;
+     width: 100%;
+     height: 50px;
      background-color: #EB612F;
 }
 
-.container > div:nth-child(2) > p{
-     /* margin-top: 15px; */
-     padding-right: 30px;
-     /* text-align: center; */
+
+
+/* ================================= Phone-Number-Page ============================= */
+
+#phone-number-page > div {
+     margin-top: 40px;
+     height: 60%;
 }
 
-/* .container > div:nth-child(3) > p {
-     margin-top: ;
-} */
-
-.container > div:nth-child(3){
-     /* width: 100%; */
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+#verify-number-page > div {
+     margin-top: 40px;
+     height: 70%;
 }
 
-.page-heading {
-     font-size: 1.7em;
-     color: #1E2228;
+#create-username-page > div {
+     margin-top: 40px;
+     height: 70%;
 }
 
-.description {
-     font-size: 1em;
-     color: #1E2228;
-     margin-top: 12px;
-}
-
-/* ======================================================================= */
-
-.number-container {
-     display: flex;
-     justify-content: flex-start;
-     flex-direction: column;
-}
-
-.number-container > div:nth-child(1) {
-     margin-top: 25px;
-     font-size: 1.3em;
-}
-
-.number-container > div:nth-child(2) {
+#genre-selection-page > div {
+     height: 90%;
      margin-top: 40px;
 }
 
-.number-container > div:nth-child(3) {
-     border: 2px solid black;
-     display: flex;
-     align-items: center;
-     max-width: 360px;
-     flex-direction: row;
+#phone-number-page > div > div:nth-child(2) {
      margin-top: 40px;
+}
+
+#verify-number-page > div > div:nth-child(2) {
+     margin-top: 40px;
+}
+
+#create-username-page > div > div:nth-child(2) {
+     margin-top: 40px;
+}
+
+#genre-selection-page > div > div:nth-child(2) {
+
+     margin-top: 40px;
+}
+
+#phone-number-page > div > div:nth-child(3) {
+     margin-top: 30px;
+     border: 2px solid #1E2228;
      border-radius: 10px;
+     padding-left: 10px;
+     height: 50px;
+     display: flex;
+     align-items: center;
 }
 
-/* .number-container > div:nth-child(3) :focus {
-     border: 2px solid red;
-} */
+#create-username-page > div > div:nth-child(3) {
+     margin-top: 30px;
+     border: 2px solid #1E2228;
+     border-radius: 10px;
+     padding-left: 10px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+}
 
-.number-container > div:nth-child(4) {
+#verify-number-page > div > div:nth-child(3) {
+     margin-top: 20px;
+}
+
+#genre-selection-page > div > div:nth-child(3) {
+     margin-top: 20px;
+}
+
+#genre-selection-page > div > div:nth-child(3) >form > div {
+     margin-top: 20px;
+     padding-left: 15px;
+     display: flex;
+     align-items: center;
+     border: 2px solid #EFEFF0;
+     border-radius: 10px;
+     height: 45px;
+}
+
+label {
+     display: flex;
+     align-items: center;
+     margin-left: 15px;
+     font-size: 1.1em;
+     /* border: 1px solid black; */
+     width: 100%;
+     height: 100%;
+}
+
+
+#phone-number-page > div > div:nth-child(4) {
+     margin-top: 50px;
      display: flex;
      justify-content: flex-end;
-     margin-top: 90px;
 }
 
-.number-container > div:nth-child(4) >a >div {
+#verify-number-page > div > div:nth-child(4) {
+     margin-top: 30px;
+     display: flex;
+     justify-content: flex-end;
+}
+
+#create-username-page > div > div:nth-child(4) {
+     margin-top: 30px;
+     display: flex;
+     justify-content: flex-end;
+}
+
+#phone-number-page > div > div:nth-child(4) > a > div {
+     background-color: #EB612F;
+     color: white;
+     border-radius: 50%; 
      display: flex;
      justify-content: center;
      align-items: center;
-     color: white;  
-     width: 40px;
-     height: 40px;
-     border-radius: 50%; 
+     width: 45px;
+     height: 45px;
+}
+
+#create-username-page > div > div:nth-child(4) > a > div {
      background-color: #EB612F;
+     color: white;
+     border-radius: 50%; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 45px;
+     height: 45px;
 }
 
-
-.number-input {
-     /* border: 2px solid #1E2228; */
-     border-radius: 10px;
-     width: 80%;
-     max-width: 360px;
-     height: 3.5em;
+#verify-number-page > div > div:nth-child(4) > a > div {
+     background-color: #EB612F;
+     color: white;
+     border-radius: 50%; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 45px;
+     height: 45px;
 }
 
-.phone-container, .number-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+#number-input {
+     width: 50%;
+     height: 30px;
+     margin-left: 5px;
      font-size: 1em;
-     color: #DDDDDD;
-     margin: auto 0;
-     padding-left: 5px;
-   }
-
-.username-container ::-webkit-input-placeholder {
-     color: #DDDDDD;
-     font-size: 20px;
-}
-
-.username-container > div > input {
-     font-size: 1em;
-}
-
-.phone-container,.number-container input {
-     border:0;
-     outline:0;
-     padding-left: 10px;
      box-shadow: none;
-     background-color: transparent;
-     font-size: 1em;
-     /* caret-color: transparent; */
 }
 
-/* input:focus {
-     outline:none!important;
-} */
+#username-input {
+     margin-left: 7px;
+     width: 60%;
+     height: 30px;
+     font-size: 1.1em;
+}
 
-/* input[type="number"]
-{
-    transform: scale(1.2);
-} */
+/* ==================== Black-Bars ================================= */
+
+#create-username-page > div > div:nth-child(1) {
+     display: flex;
+     justify-content: space-between;
+     border-radius: 2px;
+}
+
+#create-username-page > div > div:nth-child(1) > div {
+     width: 23%;
+     height: 4px;
+     background-color: #EFEFF0;
+     border-radius: 2px;
+}
+
+/* ------------------------------------------------------------ */
+
+#genre-selection-page > div > div:nth-child(1) {
+     display: flex;
+     justify-content: space-between;
+     border-radius: 2px;
+}    
+
+#genre-selection-page > div > div:nth-child(1) > div {
+     width: 23%;
+     height: 4px;
+     background-color: #EFEFF0;
+     border-radius: 2px;
+}
+
+
+
+/* ==================== Black-Bars ================================= */
+
+input {
+     background-color: transparent;
+     border: 0px solid;
+     color: #CCC;
+ }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-
-/* ========================================================= */
 
 input[type=number] {
      height: 45px;
@@ -244,141 +299,3 @@ input[type=number] {
    -webkit-appearance: none;
    margin: 0;
  }
-
-
-
-
-
-
-/* =========================================================== */
-/* =========================================================== */
-
-.new-content {
-     height: 100vh;
-     width: 100vw;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-.new-container {
-     /* border: 2px solid black; */
-     padding: 0 10px;
-     width: 90%;
-     height: 90%;
-     margin: auto;
-}
-
-#gs-container > div:nth-child(2) {
-     margin-top: 40px;
-}
-
-#gs-container > div:nth-child(3){
-     /* margin-top: 20px; */
-}
-
-#gs-container > div:nth-child(3) > div {
-     display: flex;
-     align-items: center;
-     margin-top: 20px;
-     height: 50px;
-     border: 2px solid #EFEFF0;
-     border-radius: 10px;
-     padding-left: 15px;
-}
-
-
-
-
-
-
-
-
-
-@media (min-width: 640px) {
-
-     .new-content {
-          height: 100vh;
-          width: 100vw;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-     }
-
-     .new-container {
-          border-radius: 30px;
-          padding: 20px 50px;
-          width: 86%;
-          max-width: 50%;
-          height: 90vh;
-          margin: auto;
-     }
-
-}
-
-/* ===========================Check-Box================================ */
-
-.round {
-     position: relative;
-   }
-   
-   .round label {
-     background-color: #fff;
-     border: 1px solid #ccc;
-     border-radius: 50%;
-     cursor: pointer;
-     height: 20px;
-     left: 0;
-     position: absolute;
-     top: 0;
-     width: 20px;
-   }
-   
-   .round label:after {
-     border: 2px solid #fff;
-     border-top: none;
-     border-right: none;
-     content: "";
-     height: 4px;
-     left: 4px;
-     opacity: 0;
-     position: absolute;
-     top: 5px;
-     transform: rotate(-45deg);
-     width: 10px;
-   }
-   
-   .round input[type="checkbox"] {
-     visibility: hidden;
-   }
-   
-   .round input[type="checkbox"]:checked + label {
-     background-color: #66bb6a;
-     border-color: #66bb6a;
-   }
-   
-   .round input[type="checkbox"]:checked + label:after {
-     opacity: 1;
-   }
-
-   /* html, body {
-     height: 100%;
-     margin: 0;
-   } */
-   
-   /* body {
-     -webkit-box-align: center;
-     -ms-flex-align: center;
-     align-items: center;
-     background-color: #f1f2f3;
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-   } */
-   
-   /* .counter {
-     margin: 0 auto;
-   } */
-
-
-/* ===================================================================== */

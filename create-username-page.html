@@ -2,13 +2,11 @@
 <html lang="en">
 
 <head>
-
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
      <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,28 +23,41 @@
 
 <body>
      <div class="content">
-          <div class="container number-container">
+          <div id="create-username-page" class="container">
 
                <div>
-                    <a href="index.html"><i style="color: #EB612F;" class="fas fa-chevron-left"></i></a>
+
+                    <div style="font-size: 1.3em;">
+
+                         <div style="background-color: #1E2228;"></div>
+                         <div></div>
+                         <div></div>
+                         <div></div>
+
+                    </div>
+
+                    <div>
+                         <h1 class="page-heading">Create Username</h1>
+                         <p class="description">This will be shown on your app. You’ll be able to change this later</p>
+                    </div>
+
+                    <div>
+
+                         <p><strong>@</strong></p>
+                         <input id="username-input" type="text" placeholder="Username">
+
+                    </div>
+
+                    <div>
+                         <a href="gener-selection-page.html">
+                              <div>
+                                   <i data-feather="arrow-right"></i>
+                              </div>
+                         </a>
+                    </div>
+
                </div>
 
-               <div>
-                    <h1 class="page-heading">Enter your number</h1>
-                    <p class="description">We’ll never share this with anyone and it won’t be shown on your app</p>
-               </div>
-               <div>
-                    <p>+91 |</p>
-                    <input class="number-input" type="text" placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}">
-               </div>
-
-               <div>
-                    <a href="verify-number.html">
-                         <div>
-                              <i data-feather="arrow-right"></i>
-                         </div>
-                    </a>
-               </div>
 
           </div>
      </div>
