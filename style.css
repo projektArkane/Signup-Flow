@@ -89,9 +89,6 @@ a {
 }
 
 
-
-/* ================================= Phone-Number-Page ============================= */
-
 #phone-number-page > div {
      margin-top: 20px;
      height: 60%;
@@ -112,6 +109,11 @@ a {
      margin-top: 20px;
 }
 
+#social-skill-page > div {
+     height: 90%;
+     margin-top: 20px;
+}
+
 #phone-number-page > div > div:nth-child(2) {
      margin-top: 40px;
 }
@@ -125,6 +127,11 @@ a {
 }
 
 #genre-selection-page > div > div:nth-child(2) {
+
+     margin-top: 55px;
+}
+
+#social-skill-page > div > div:nth-child(2) {
 
      margin-top: 55px;
 }
@@ -157,7 +164,21 @@ a {
      margin-top: 20px;
 }
 
+#social-skill-page > div > div:nth-child(3) {
+     margin-top: 20px;
+}
+
 #genre-selection-page > div > div:nth-child(3) >form > div {
+     margin-top: 20px;
+     padding-left: 15px;
+     display: flex;
+     align-items: center;
+     border: 2px solid #EFEFF0;
+     border-radius: 10px;
+     height: 50px;
+}
+
+#social-skill-page > div > div:nth-child(3) > div {
      margin-top: 20px;
      padding-left: 15px;
      display: flex;
@@ -207,6 +228,39 @@ label {
      height: 45px;
 }
 
+#genre-selection-page > div > div:nth-child(4) > a > div {
+     background-color: #EB612F;
+     color: white;
+     border-radius: 50%; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 45px;
+     height: 45px;
+}
+
+#social-skill-page > div > div:nth-child(4) > a > div {
+     background-color: #EB612F;
+     color: white;
+     border-radius: 50%; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 45px;
+     height: 45px;
+}
+
+/* #genre-selection-page > div > div:nth-child(4) > a > div {
+     background-color: #EB612F;
+     color: white;
+     border-radius: 50%; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 45px;
+     height: 45px;
+} */
+
 #create-username-page > div > div:nth-child(4) > a > div {
      background-color: #EB612F;
      color: white;
@@ -228,6 +282,10 @@ label {
      width: 45px;
      height: 45px;
 }
+.feather {
+     height: 20px;
+     width: 20px;
+}
 
 #number-input {
      width: 50%;
@@ -238,8 +296,8 @@ label {
 }
 
 #username-input {
-     margin-left: 10px;
-     width: 60%;
+     margin-left: 15px;
+     width: 75%;
      height: 30px;
      font-size: 1.1em;
 }
@@ -274,6 +332,21 @@ label {
      border-radius: 2px;
 }
 
+/* --------------------------------------------------------------- */
+
+
+#social-skill-page > div > div:nth-child(1) {
+     display: flex;
+     justify-content: space-between;
+     border-radius: 2px;
+}    
+
+#social-skill-page > div > div:nth-child(1) > div {
+     width: 23%;
+     height: 4px;
+     background-color: #EFEFF0;
+     border-radius: 2px;
+}
 
 
 /* ==================== Black-Bars ================================= */
@@ -305,3 +378,25 @@ input[type=number] {
    -webkit-appearance: none;
    margin: 0;
  }
+
+ .floating {
+
+	position:fixed;
+	bottom:40px;
+	right: 25px;
+}
+
+::-webkit-input-placeholder {
+     color: #C8CACC;
+     font-size: 1em;
+}
+
+#circle {
+     width: 160px;
+     height: 160px;
+     background-color: #EFEFF0;
+     border-radius: 50%;
+}
+
+ 
+
