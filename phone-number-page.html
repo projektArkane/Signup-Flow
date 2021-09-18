@@ -7,6 +7,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
      <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +33,18 @@
 
                     <div>
                          <h1 class="page-heading">Enter your Number</h1>
-                         <p class="description" style="padding-right: 10px;">We’ll never share this with anyone and it won’t be shown on your app</p>
+                         <p class="description" style="padding-right: 10px;">We’ll never share this with anyone and it
+                              won’t be shown on your app</p>
                     </div>
 
                     <div>
+
                          <p>+91 |</p>
-                         <input class="username-input" type="text" placeholder="Phone Number" name="phone" maxlength="10"
+                         <form action="">
+                              <input class="username-input phone" type="text" placeholder="Phone Number" name="phone" maxlength="10"
                               pattern="[0-9]{10}">
+                         </form>
+
                     </div>
 
                     <div>
@@ -59,5 +65,18 @@
           feather.replace()
      </script>
 </body>
+
+<script type="text/javascript">
+     $('.phone').keypress(function(e) {
+         var arr = [];
+         var kk = e.which;
+      
+         for (i = 48; i < 58; i++)
+             arr.push(i);
+      
+         if (!(arr.indexOf(kk)>=0))
+             e.preventDefault();
+     });
+   </script>
 
 </html>
