@@ -41,8 +41,8 @@
 
                          <p>+91 |</p>
                          <form action="">
-                              <input class="username-input phone" type="text" placeholder="Phone Number" name="phone" maxlength="10"
-                              pattern="[0-9]{10}">
+                              <input class="username-input phone" type="text" placeholder="Phone Number" name="phone"
+                                   maxlength="10" pattern="[0-9]{10}">
                          </form>
 
                     </div>
@@ -61,22 +61,22 @@
           </div>
      </div>
 
+     <script type="text/javascript">
+          $('.phone').keypress(function (e) {
+               var arr = [];
+               var kk = e.which;
+
+               for (i = 48; i < 58; i++)
+                    arr.push(i);
+
+               if (!(arr.indexOf(kk) >= 0))
+                    e.preventDefault();
+          });
+     </script>
+
      <script>
           feather.replace()
      </script>
 </body>
-
-<script type="text/javascript">
-     $('.phone').keypress(function(e) {
-         var arr = [];
-         var kk = e.which;
-      
-         for (i = 48; i < 58; i++)
-             arr.push(i);
-      
-         if (!(arr.indexOf(kk)>=0))
-             e.preventDefault();
-     });
-   </script>
 
 </html>
