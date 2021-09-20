@@ -41,7 +41,7 @@
 
                          <p>+91 |</p>
                          <form action="">
-                              <input id="testing" class="username-input phone" type="text" placeholder="Phone Number" name="phone"
+                              <input class="username-input phone" type="text" placeholder="Phone Number" name="phone"
                                    maxlength="10" pattern="[0-9]{10}">
                          </form>
 
@@ -61,7 +61,7 @@
           </div>
      </div>
 
-     <!-- <script type="text/javascript">
+     <script type="text/javascript">
           $('.phone').keypress(function (e) {
                var arr = [];
                var kk = e.which;
@@ -72,30 +72,7 @@
                if (!(arr.indexOf(kk) >= 0))
                     e.preventDefault();
           });
-     </script> -->
-
-     <script type="text/javascript">
-
-          function numbersonly()
-          {
-          var data=document.getElementById('testing').value;
-          var filter=/^[a-zA-Z0-9]+$/;
-           if(!filter.test(data))
-              {
-              alert("Please enter alphanumeric only");
-              document.getElementById('testing').value="";
-              document.getElementById('testing').focus();
-              return false;
-              }
-              else if(data.Length!=10)
-              {
-              alert("Please enter 10 digits");
-              return false;
-              }
-              else
-              return true;
-          }
-          </script>
+     </script>
 
      <script>
           feather.replace()

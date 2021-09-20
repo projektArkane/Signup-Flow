@@ -10,6 +10,7 @@ html, body {
 
 a {
      text-decoration: none;
+     all: unset;
 }
 
 *:focus {
@@ -49,6 +50,7 @@ a {
           margin: 0 auto;
           max-width: 70%;
      }
+
 }
 
 #start-page {
@@ -380,7 +382,6 @@ input[type=number] {
  }
 
  .floating {
-
 	position:fixed;
 	bottom:40px;
 	right: 25px;
@@ -398,5 +399,50 @@ input[type=number] {
      border-radius: 50%;
 }
 
- 
+.nav {
+     background-color: white;
+     height: 64px;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     position: absolute;
+     bottom: 0;
+}
 
+.nav-icons {
+     color: #1E2228;
+     width: 30px;
+     height: 30px;
+}
+
+#welcome-content {
+     background-color: #1E2228;
+}
+
+#welcome-container > div:nth-child(1) {
+     margin-top: 10px;
+}
+
+#welcome-container > div > p:nth-child(1) {
+     font-size: 1.1em;
+}
+
+#welcome-container > div > p:nth-child(2) {
+     margin-top: 5px;
+     color: white;
+     font-size: 1.5em;
+     font-weight: 700;
+}
+
+#welcome-container > div:nth-child(2) {
+     margin-top: 30px;
+}
+
+.comp-head {
+     display: flex;
+     font-weight: 700;
+     justify-content: flex-start;
+     gap: 15px;
+     color: white;
+}
