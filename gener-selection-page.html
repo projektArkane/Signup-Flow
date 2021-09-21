@@ -19,6 +19,76 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Renown</title>
+
+
+     <style>
+          /* The container */
+          .radio-container {
+               /* display: block; */
+               position: relative;
+               padding-left: 40px;
+               margin-bottom: 0px;
+               cursor: pointer;
+               font-size: 20px;
+               -webkit-user-select: none;
+               -moz-user-select: none;
+               -ms-user-select: none;
+               user-select: none;
+          }
+
+          /* Hide the browser's default radio button */
+          .radio-container input {
+               position: absolute;
+               opacity: 0;
+               cursor: pointer;
+          }
+
+          /* Create a custom radio button */
+          .checkmark {
+               position: absolute;
+               top: 12px;
+               left: 0;
+               height: 23px;
+               width: 23px;
+               background-color: #eee;
+               border-radius: 50%;
+          }
+
+          /* On mouse-over, add a grey background color */
+          .radio-container:hover input~.checkmark {
+               background-color: #ccc;
+          }
+
+          /* When the radio button is checked, add a blue background */
+          .radio-container input:checked~.checkmark {
+               background-color: #EB612F;
+          }
+
+          /* Create the indicator (the dot/circle - hidden when not checked) */
+          .checkmark:after {
+               content: "";
+               position: absolute;
+               display: none;
+          }
+
+          /* Show the indicator (dot/circle) when checked */
+          .radio-container input:checked~.checkmark:after {
+               display: block;
+          }
+
+          /* Style the indicator (dot/circle) */
+          .radio-container .checkmark:after {
+               top: 7px;
+               left: 7px;
+               width: 9px;
+               height: 9px;
+               border-radius: 50%;
+               background: white;
+          }
+     </style>
+
+
+
 </head>
 
 <body>
@@ -46,47 +116,99 @@
                          <form action="#" style="display: flex; flex-direction: column;">
 
                               <div style="margin-top: 0px;">
-                                   <input type="checkbox" name="" id="fitness-coach">
+                                   <label for="fitness-coach" class="radio-container">Fitness Coach
+                                        <input id="fitness-coach" type="radio" checked="checked" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+
+                              <div>
+                                   <label for="video-creator" class="radio-container">Video Creator
+                                        <input id="video-creator" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+
+                              <div>
+                                   <label for="performer" class="radio-container">Performer
+                                        <input id="performer" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+
+                              <div>
+                                   <label for="photographer" class="radio-container">Photographer
+                                        <input id="photographer" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+                              <div>
+                                   <label for="life-coach" class="radio-container">Life Coach
+                                        <input id="life-coach" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+                              <div>
+                                   <label for="gaming-creator" class="radio-container">Gaming Creator
+                                        <input id="gaming-creator" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+                              <div>
+                                   <label for="teacher-educator" class="radio-container">Teacher & Educator
+                                        <input id="teacher-educator" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+                              <div>
+                                   <label for="artist-model" class="radio-container">Artist & Model
+                                        <input id="artist-model" type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                   </label>
+                              </div>
+
+                              <!-- <div style="margin-top: 0px;">
+                                   <input type="radio" name="genre" id="fitness-coach">
                                    <label for="fitness-coach">Fitness Coach</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="video-creator">
+                                   <input type="radio" name="genre" id="video-creator">
                                    <label for="video-creator">Video Creator</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="performer">
+                                   <input type="radio" name="genre" id="performer">
                                    <label for="performer">Performer</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="photographer">
+                                   <input type="radio" name="genre" id="photographer">
                                    <label for="photographer">Photographer</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="life-coach">
+                                   <input type="radio" name="genre" id="life-coach">
                                    <label for="life-coach">Life Coach</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="gaming-creator">
+                                   <input type="radio" name="genre" id="gaming-creator">
                                    <label for="gaming-creator">Gaming Creator</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="teacher-and-educator">
+                                   <input type="radio" name="genre" id="teacher-and-educator">
                                    <label for="teacher-and-educator">Teacher & Educator</label>
                               </div>
 
                               <div>
-                                   <input type="checkbox" name="" id="artist-and-model">
+                                   <input type="radio" name="genre" id="artist-and-model">
                                    <label for="artist-and-model">Artist & Model</label>
-                              </div>
+                              </div> -->
 
                          </form>
-                        
+
                     </div>
 
                     <div>
