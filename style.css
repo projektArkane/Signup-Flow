@@ -10,7 +10,11 @@ html, body {
 
 a {
      text-decoration: none;
-     all: unset;
+     /* all: unset; */
+}
+
+a:visited {
+     color: white;
 }
 
 *:focus {
@@ -406,8 +410,8 @@ input[type=number] {
      display: flex;
      align-items: center;
      justify-content: space-around;
-     position: absolute;
-     bottom: 0;
+     /* position: absolute;
+     bottom: 0; */
 }
 
 .nav-icons {
