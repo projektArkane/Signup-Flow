@@ -10,6 +10,7 @@ html, body {
 
 a {
      text-decoration: none;
+     color: white;
      /* all: unset; */
 }
 
@@ -411,7 +412,7 @@ input[type=number] {
      align-items: center;
      justify-content: space-around;
      position: fixed;
-     bottom: 0;
+     bottom: 0vh;
      z-index: 10;
 }
 
