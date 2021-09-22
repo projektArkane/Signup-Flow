@@ -2,40 +2,48 @@
 <html lang="en">
 
 <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
      <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="app.css">
 
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Renown</title>
+
+
 </head>
 
 <body>
-     <div id="welcome-content" class="content">
+     <div class="container">
+          
           <div id="welcome-container" class="container">
 
-               <div class="" style="color: white; margin-top: 30px;">
+               <div style="display: flex; justify-content: center; margin-top: 50px;">
+                    <img src="Img/Frame.png" width="180px" height="180px" alt="">
+               </div>
+
+               <div class="" style="color: white; margin-top: 30px; text-align: center;">
                     <p>Welcome, Mandana</p>
                     <p>Finish setting up your app!</p>
                </div>
 
                <div>
 
-                    <div class="comp" style="margin-left: 5px;">
+                    <div class="comp" style="margin-left: 5px; margin-top: 20px;">
 
                          <div class="comp-head">
                               <span class="material-icons" style="position: relative; right: 10px; font-size: 22px;">check_circle</span>
@@ -45,9 +53,9 @@
                          <div class="comp-content" style="padding-left: 33px; border-left: 2px solid rgba(255, 255, 255, 0.1); padding-bottom: 20px; margin-top: 5px; color: white;">
                               <p style="color: rgba(147, 149, 153, 1); font-size: 0.9em;">Congratulations on creating your app with Renown</p>
 
-                              <a href="#">
+                              <a href="#" onclick="document.getElementById('modal-container-id').classList.add('show')">
 
-                                   <div style="margin-top: 10px; width: 140px; height: 40px; border-radius: 25px; display: flex; align-items: center; justify-content: center; gap: 7px; background-color: rgba(255, 255, 255, 0.1); padding: 0 5px; box-sizing: content-box;">
+                                   <div  id="open" style="margin-top: 10px; width: 140px; height: 40px; border-radius: 25px; display: flex; align-items: center; justify-content: center; gap: 7px; background-color: rgba(255, 255, 255, 0.1); padding: 0 5px; box-sizing: content-box;">
                                         <i class="feather" data-feather="eye"></i>
                                         <p style="font-weight: 600;">Preview App</p>
                                    </div>
@@ -91,17 +99,12 @@
                               <p style="color: rgba(147, 149, 153, 1);">Build your Fanbase</p>
                          </div>
      
-                         <div>
-
-                         </div>
-     
-
                     </div>
 
                </div>
 
                <div>
-                    <a href="welcome-page-2.html" style="position: fixed; bottom: 90px; right: 30px;">
+                    <a href="finishing-page.html" style="position: fixed; bottom: 90px; right: 30px;">
                          <div style="background-color: #EB612F;
                          color: white;
                          border-radius: 50%; 
@@ -117,34 +120,55 @@
 
           </div>
 
-          <nav class="nav">
-
-               <a href="#">
-                    <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="home"></i>
-               </a>
-               
-               <a href="#">
-                    <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="eye"></i>
-               </a>
-               
-               <a href="#">
-                    <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="plus"></i>
-               </a>
-
-               <a href="#">
-                    <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="bell"></i>
-               </a>
-
-               <a href="#">
-                    <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="smile"></i>
-               </a>
-
-          </nav>
      </div>
+
+     <nav class="nav">
+
+          <a href="#">
+               <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="home"></i>
+          </a>
+          
+          <a href="#">
+               <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="eye"></i>
+          </a>
+          
+          <a href="#">
+               <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="plus"></i>
+          </a>
+
+          <a href="#">
+               <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="bell"></i>
+          </a>
+
+          <a href="#">
+               <i class="feather nav-icons" style="width: 28px; height: 28px;" data-feather="smile"></i>
+          </a>
+
+     </nav>
+
+     <div id="modal-container-id" class="modal-container">
+          <div class="modal">
+               <h1>Hi There</h1>
+               <br>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor architecto suscipit saepe eius voluptatem in provident laborum temporibus, error voluptate natus nihil vitae dolorem odio. Dolor asperiores aut cumque ducimus.</p>
+          </div>
+     </div>
+
+     <!-- <script>
+
+          const open = document.getElementById("open");
+          const modal_container = document.getElementById("model-container-id");
+
+          open.addEventListener('click', () => {
+               modal_container.classList.add('show');
+          });
+
+     </script> -->
 
      <script>
           feather.replace()
      </script>
+
 </body>
 
 </html>
