@@ -26,10 +26,10 @@ html, body {
 
 body {
      background-color: #1E2228;
-     min-height: 100vh;
-     display: flex;
+     /* min-height: 100vh; */
+     /* display: flex;
      justify-content: center;
-     align-items: center;
+     align-items: center; */
 }
 
 .fake-border {
@@ -68,21 +68,6 @@ body {
      width: 30px;
      height: 30px;
 }
-
-/* .modal-container {
-     opacity: 0;
-     pointer-events: none;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     position: fixed;
-     top: 0;
-     left: 0;
-     min-height: 100vh;
-     min-width: 100vw;
-     background-color: rgba(0, 0, 0, 0.3 );
-     transition: opacity 0.3s ease;
-} */
 
 .new-modal-container {
      opacity: 0;
