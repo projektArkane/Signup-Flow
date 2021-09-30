@@ -39,28 +39,29 @@
                transition: 0.3s;
           } */
 
-          .sidenav a:hover {
+          /* .sidenav a:hover {
                color: #f1f1f1;
-          }
+          } */
 
-          form>div {
-               color: rgba(147, 149, 153, 1);
-               font-size: 15px;
+          /* form > div > {
+               font-size: 10px;
                display: flex;
                flex: 10;
                align-items: center;
                justify-content: space-around;
                gap: 10;
-          }
+          } */
 
-          form>div>label {
+          form > div > label {
+               /* font-size: 30px; */
+               color: rgba(147, 149, 153, 1);
                flex: 7;
           }
 
-          form>div>input {
+          /* form>div>input {
                flex: 3;
                padding-left: 5px;
-          }
+          } */
 
           .sidenav .closebtn {
                position: absolute;
@@ -79,6 +80,10 @@
                     font-size: 18px;
                }
           }
+          
+          form > div > label {
+               font-size: 30px;
+          }
      </style>
 
 </head>
@@ -91,16 +96,15 @@
 
           <div id="mySidenav" class="sidenav">
                <a href="javascript:void(0)" class="closebtn" style="color: rgba(30, 34, 40, 1);" onclick="closeNav()">&times;</a>
-               <div class="mt-16 font-semibold text-xl pl-5">
+               <div class="mt-20 font-semibold pl-5">
                     <span style="color: rgba(30, 34, 40, 1);">Apply Filters</span>
                     <hr style="width:90%" class="mt-5">
-                    <span style="font-size: 10px; color: rgba(30, 34, 40, 1);">Order Status</span>
+                    <span style="font-size: 11px; color: rgba(30, 34, 40, 1);">Order Status</span>
      
                     <form action="#">
 
-                         <div>
+                         <div class="mt-1">
                               <label id="all-text" class="container-checkbox">All
-                                   <!-- <input id="all-checkbox" type="checkbox" onclick="validate('all-checkbox', 'all-text')"> -->
                                    <input id="all-checkbox" type="checkbox" onclick="allFucntion()">
                                    <span class="checkmark"></span>
                               </label>
@@ -130,9 +134,9 @@
                          <!-- ======================================= -->
      
                          <hr style="width:90%" class="mt-5">
-                         <span style="font-size: 10px; color: rgba(30, 34, 40, 1);">Service Type</span>
+                         <span style="font-size: 11px; color: rgba(30, 34, 40, 1);">Service Type</span>
      
-                         <div>
+                         <div class="mt-1">
                               <label id="secall-text" class="container-checkbox">All
                                    <input id="secall-checkbox" type="checkbox" onclick="secallFunction()">
                                    <span class="checkmark"></span>
@@ -172,26 +176,23 @@
                                    <span class="checkmark"></span>
                               </label>
                          </div>
+
+                         <hr style="width:90%" class="mt-4">
+
+                         <div class="flex justify-around pr-5" style="font-size: 15px; margin-top: 1.2em;">
+     
+                              <button type="button" style="font-weight: 600; width: 110px; height: 42px; border-radius: 24px; background-color: rgba(239, 239, 240, 1);" onclick="closeNav()">Cancel</button>
+
+                              <button type="submit" style="font-weight: 600; width: 110px; height: 42px; border-radius: 24px; background-color: rgba(30, 34, 40, 1); color: white;" onclick="closeNav()">Apply</button>
+     
+                         </div>
      
                     </form>
-     
-                    <hr style="width:90%" class="mt-4">
      
                     <!-- <a href="#">About</a>
                     <a href="#">Services</a>
                     <a href="#">Clients</a>
                     <a href="#">Contact</a> -->
-               </div>
-
-               <div class="flex justify-around px-2" style="font-size: 15px; margin-top: 1.2em;">
-     
-                    <div class="flex justify-center items-center" style="width: 100px; height: 42px; border-radius: 24px; background-color: rgba(239, 239, 240, 1);" onclick="closeNav()">
-                         <p>Cancel</p>
-                    </div>
-
-                    <div class="flex justify-center items-center" style="width: 100px; height: 42px; border-radius: 24px; background-color: rgba(30, 34, 40, 1); color: rgba(239, 239, 240, 1);" onclick="closeNav()">
-                         <p>Apply</p>
-                    </div>
                </div>
 
           </div>

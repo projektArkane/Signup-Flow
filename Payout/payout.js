@@ -5,7 +5,7 @@ var data = template();
 document.getElementById("handle").innerHTML = data;
 
 function openNav() {
-     document.getElementById("mySidenav").style.width = "250px";
+     document.getElementById("mySidenav").style.width = "280px";
 }
 
 function closeNav() {

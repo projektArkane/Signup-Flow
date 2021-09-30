@@ -99,7 +99,10 @@ li:active {
      /* border: 1px solid black; */
      position: relative;
      /* margin-bottom: 12px; */
+     padding-left: 5px;
      cursor: pointer;
+     line-height: 26px;
+     font-weight: 600;
      font-size: 15px;
      -webkit-user-select: none;
      -moz-user-select: none;
