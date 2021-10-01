@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+     <!-- <base href="/">
+
+     <script type="text/javascript" src='./templates/work.js'></script> -->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="earnings.css">
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Renown</title>
+
+</head>
+
+<body>
+
+     <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" style="color: rgba(30, 34, 40, 1);"
+               onclick="closeNav()">&times;</a>
+          <div class="mt-20 font-semibold pl-5">
+               <span style="color: rgba(30, 34, 40, 1);">Apply Filters</span>
+               <hr style="width:90%" class="mt-5">
+               <span style="font-size: 11px; color: rgba(30, 34, 40, 1);">Order Status</span>
+
+               <form action="#">
+
+                    <div class="mt-1">
+                         <label id="all-text" class="container-checkbox">All
+                              <input id="all-checkbox" type="checkbox" onclick="allFucntion()">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="delivered-text" class="container-checkbox">Delivered
+                              <input id="delivered-checkbox" type="checkbox"
+                                   onclick="validate('delivered-checkbox', 'delivered-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="pending-text" class="container-checkbox">Pending
+                              <input id="pending-checkbox" type="checkbox"
+                                   onclick="validate('pending-checkbox', 'pending-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="refund-text" class="container-checkbox">Refunded
+                              <input id="refund-checkbox" type="checkbox"
+                                   onclick="validate('refund-checkbox', 'refund-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <!-- ======================================= -->
+
+                    <hr style="width:90%" class="mt-5">
+                    <span style="font-size: 11px; color: rgba(30, 34, 40, 1);">Service Type</span>
+
+                    <div class="mt-1">
+                         <label id="secall-text" class="container-checkbox">All
+                              <input id="secall-checkbox" type="checkbox" onclick="secallFunction()">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="service-text" class="container-checkbox">Services
+                              <input id="service-checkbox" type="checkbox"
+                                   onclick="validate('service-checkbox', 'service-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="exclusive-text" class="container-checkbox">Exclusives
+                              <input id="exclusive-checkbox" type="checkbox"
+                                   onclick="validate('exclusive-checkbox', 'exclusive-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+                    <div>
+                         <label id="collection-text" class="container-checkbox">Collections
+                              <input id="collection-checkbox" type="checkbox"
+                                   onclick="validate('collection-checkbox', 'collection-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="live-text" class="container-checkbox">Live
+                              <input id="live-checkbox" type="checkbox"
+                                   onclick="validate('live-checkbox', 'live-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <div>
+                         <label id="gift-text" class="container-checkbox">Gifts
+                              <input id="gift-checkbox" type="checkbox"
+                                   onclick="validate('gift-checkbox', 'gift-text')">
+                              <span class="checkmark"></span>
+                         </label>
+                    </div>
+
+                    <hr style="width:90%" class="mt-4">
+
+                    <div class="flex justify-around" style="width: 90%; font-size: 15px; margin-top: 1.2em;">
+
+                         <button type="button"
+                              style="font-weight: 600; width: 110px; height: 42px; border-radius: 24px; background-color: rgba(239, 239, 240, 1);"
+                              onclick="closeNav()">Cancel</button>
+
+                         <button type="submit"
+                              style="font-weight: 600; width: 110px; height: 42px; border-radius: 24px; background-color: rgba(30, 34, 40, 1); color: white;"
+                              onclick="closeNav()">Apply</button>
+
+                    </div>
+
+               </form>
+
+          </div>
+
+     </div>
+
+     <!-- ====================================================================================== -->
+
+     <div class="container">
+
+          <div class="mt-10">
+               <a href="../finishing-page.html"><img src="../Icons/back-btn.svg" alt=""></i></a>
+          </div>
+
+          <div class="mt-10">
+               <ul style="color: rgba(147, 149, 153, 1);" class="flex justify-around gap-6 font-bold">
+                    <li id="earnings-btn" onclick="showEarningnsPage()" style="color: rgba(30, 34, 40, 1);">Earnings
+                    </li>
+                    <li id="payout-btn" onclick="hideEarningsPage()">Payouts</li>
+               </ul>
+          </div>
+
+     </div>
+
+     <div id="handle"></div>
+
+     <!-- =================================================================================== -->
+
+     <script id="raw-template" type="text/x-handlebars-template">
+
+
+          <div id="white" class="bg-white min-h-screen pt-5 mt-4 rounded-t-3xl">
+     
+               <div id="earnings-tab" class="container">
+     
+                    <span style="color: #939599;">Total Earnings</span>
+                    <br>
+                    <span id="total-earnings-amt" style="color: rgba(30, 34, 40, 1);" class="font-bold text-2xl">
+                         <!-- &#8377 blank -->
+                    </span>
+     
+                    <div style="background-color: rgba(255, 246, 229, 1);"
+                         class="mt-3 w-full mx-auto rounded-lg p-3 flex gap-3">
+                         <div style="background-color: rgba(235, 97, 47, 1); width: 20px; height: 20px; border-radius: 50%;"
+                              class="mt-1 flex flex-shrink-0 justify-center items-center text-white text-sm">
+                              <p class="font-semibold">!</p>
+                         </div>
+     
+                         <div class="text-sm">
+                              <p class="font-semibold">2 orders worth &#8377;<span>1600</span> pending</p>
+                              <p class="">Complete the pending orders to recieve the amount</p>
+                         </div>
+                    </div>
+     
+                    <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
+                         class="mt-8 flex justify-between items-center pt-3">
+                         <p class="font-semibold">Orders History</p>
+                         <div id="filter" onclick="openNav()">
+                              <img src="../Icons/filter.svg" alt="">
+                         </div>
+                    </div>
+     
+                    <div class="my-4">
+                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
+                    </div>
+     
+                    <!-- ============================================ -->
+     
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div id="gift" style="flex: 2;">
+                              <img src="../Icons/gift.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Service Booked</p>
+                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+                              <img class="mt-1" src="../Icons/pending.svg" alt="">
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+     
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/gift.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Collection Renewed</p>
+                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+  
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+     
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/gift.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Exclusive Unlocked</p>
+                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+
+                    <div class="my-4">
+                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jun, 2021</p>
+                    </div>
+     
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/gift.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Livestream Booked</p>
+                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+     
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/gift.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Gift Received</p>
+                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+     
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/gift.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Service Booked</p>
+                              <p style="color: rgba(147, 149, 153, 1);" class="font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+                                        <img class="mt-1" src="../Icons/pending.svg" alt="">    
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/gift-greyed.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Service Cancelled</p>
+                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                        Jul 2021</span></p>
+                                        <img class="mt-1" src="../Icons/refunded.svg" alt="">
+                         </div>
+                         <div style="flex: 1;" class="grey font-semibold"> &#8377;<span>800</span></div>
+                    </div>
+     
+               </div>
+
+               <!-- ========================================== -->
+
+               <div id="payouts-tab" class="hidden container">
+
+                    <span style="color: #939599;">Payout Balance</span>
+                    <br>
+                    <span id="total-earnings-amt" style="color: rgba(30, 34, 40, 1);" class="font-bold text-2xl">
+                         &#8377 60,000
+                    </span>
+
+                    <div class="mt-3 flex items-center gap-2">
+                         <img src="../Icons/calendar.svg" alt="">
+                         <span class="text-sm">Next payout due on <strong>24 Jul, 2021</strong></span>
+                    </div>
+
+                    <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
+                    class="mt-6 flex justify-between items-center pt-3">
+                         <p class="font-semibold">Payments History</p>
+                         <div id="filter" onclick="openNav()">
+                              <img src="../Icons/filter.svg" alt="">
+                         </div>
+                    </div>
+
+                    <div class="my-4">
+                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
+                    </div>
+
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/card-greyed.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Payout</p>
+                              <p class="text-sm grey font-normal"> <span>18
+                                        Jul 2021</span></p>
+                                        <img class="mt-1" src="../Icons/failed.svg" alt="">
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                    </div>
+
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/card.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Payout</p>
+                              <p class="text-sm grey font-normal"> <span>11
+                                        Jul 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                    </div>
+
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/card.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Payout</p>
+                              <p class="text-sm grey font-normal"> <span>4
+                                        Jul 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                    </div>
+
+                    <div class="my-4">
+                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jun, 2021</p>
+                    </div>
+
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/card.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Payout</p>
+                              <p class="text-sm grey font-normal"> <span>27
+                                        Jun 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                    </div>
+
+                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                         <div style="flex: 2;">
+                              <img src="../Icons/card.svg" alt="">
+                         </div>
+                         <div style="flex: 7;" class="font-semibold">
+                              <p>Payout</p>
+                              <p class="text-sm grey font-normal"> <span>27
+                                        Jun 2021</span></p>
+
+                         </div>
+                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                    </div>
+
+               </div>
+     
+          </div>
+
+     </script>
+
+     <script src="handlebars-v4.7.7.js"></script>
+
+     <!-- <script src="route.js"></script> -->
+
+     <script src="earnings.js"></script>
+
+</body>
+
+</html>

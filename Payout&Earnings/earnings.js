@@ -1,8 +1,34 @@
+
+// ====================== HandleBars =============================
+
 var getRawTemplate = document.getElementById("raw-template").innerHTML;
 var template = Handlebars.compile(getRawTemplate);
 var data = template();
 
 document.getElementById("handle").innerHTML = data;
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+// ========= Total-Earnings ==============
+
+// var totalEarnings = 560400;
+// totalEarnings = totalEarnings.toString();
+// var lastThree = totalEarnings.substring(totalEarnings.length-3);
+// var otherNumbers = totalEarnings.substring(0,totalEarnings.length-3);
+// if(otherNumbers != '')
+//     lastThree = ',' + lastThree;
+// var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+
+var totalEarnings = 560400; 
+var commaFormatted = (totalEarnings).toLocaleString('en-IN');
+
+document.getElementById("total-earnings-amt").innerHTML = `&#8377 ${commaFormatted}`;
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+// ================ Side-Navbar ===================================
 
 function openNav() {
      document.getElementById("mySidenav").style.width = "280px";
@@ -74,3 +100,16 @@ function secallFunction() {
      }
 }
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// document.getElementById("payout-btn").addEventListener("click", ())
+
+function hideEarningsPage() {
+     document.getElementById("earnings-tab").classList.add("hidden");
+     document.getElementById("payouts-tab").classList.remove("hidden");
+}
+
+function showEarningnsPage() {
+     document.getElementById("earnings-tab").classList.remove("hidden");
+     document.getElementById("payouts-tab").classList.add("hidden");
+}

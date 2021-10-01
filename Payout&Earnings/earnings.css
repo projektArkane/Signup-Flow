@@ -35,7 +35,7 @@ body {
      color: rgba(147, 149, 153, 1);
 }
 
-.fake-border {
+.fb {
      border: 1px solid black;
 }
 
@@ -149,4 +149,44 @@ li:active {
      -webkit-transform: rotate(45deg);
      -ms-transform: rotate(45deg);
      transform: rotate(45deg);
+}
+
+/* =================================================== */
+
+.sidenav {
+     height: 100%;
+     width: 0;
+     border-radius: 15px 0 0 15px;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     right: 0;
+     background-color: white;
+     overflow-x: hidden;
+     transition: 0.45s;
+     padding-top: 60px;
+}
+
+
+
+form>div>label {
+     color: rgba(147, 149, 153, 1);
+}
+
+.sidenav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+     .sidenav {
+          padding-top: 15px;
+     }
+
+     .sidenav a {
+          font-size: 18px;
+     }
 }
