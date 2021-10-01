@@ -107,9 +107,15 @@ function secallFunction() {
 function hideEarningsPage() {
      document.getElementById("earnings-tab").classList.add("hidden");
      document.getElementById("payouts-tab").classList.remove("hidden");
+     document.getElementById("payout-btn").style.color = "rgba(30, 34, 40, 1)";
+     document.getElementById("earnings-btn").style.color = "rgba(147, 149, 153, 1)";
+
+
 }
 
 function showEarningnsPage() {
      document.getElementById("earnings-tab").classList.remove("hidden");
      document.getElementById("payouts-tab").classList.add("hidden");
+     document.getElementById("payout-btn").style.color = "rgba(147, 149, 153, 1)";
+     document.getElementById("earnings-btn").style.color = "rgba(30, 34, 40, 1)";
 }
