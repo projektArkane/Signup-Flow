@@ -5,10 +5,6 @@
 
      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-     <!-- <base href="/">
-
-     <script type="text/javascript" src='./templates/work.js'></script> -->
-
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -145,9 +141,9 @@
 
           <div class="mt-10">
                <ul style="color: rgba(147, 149, 153, 1);" class="flex justify-around gap-6 font-bold">
-                    <li id="earnings-btn" onclick="showEarningnsPage()">Earnings
+                    <li id="earnings-btn" class="head-btn" onclick="showEarningnsPage()">Earnings
                     </li>
-                    <li id="payout-btn" onclick="hideEarningsPage()">Payouts</li>
+                    <li id="payout-btn" class="head-btn" onclick="hideEarningsPage()">Payouts</li>
                </ul>
           </div>
 
@@ -186,7 +182,7 @@
                     <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
                          class="mt-8 flex justify-between items-center pt-3">
                          <p class="font-semibold">Orders History</p>
-                         <div id="filter" onclick="openNav()">
+                         <div id="filter" class="filter-btn" onclick="openNav()">
                               <img src="../Icons/filter.svg" alt="">
                          </div>
                     </div>
@@ -197,20 +193,20 @@
      
                     <!-- ============================================ -->
      
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div id="gift" style="flex: 2;">
+                    <div class="component mb-4">
+                         <div id="gift">
                               <img src="../Icons/gift.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Service Booked</p>
                               <p class="grey font-normal"><span>Arjun Malik</span> <span>7
                                         Jul 2021</span></p>
                               <img class="mt-1" src="../Icons/pending.svg" alt="">
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                         <div class="font-semibold"> &#8377;<span>800</span></div>
                     </div>
      
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
+                    <div class="component mb-4">
                          <div style="flex: 2;">
                               <img src="../Icons/gift.svg" alt="">
                          </div>
@@ -223,73 +219,73 @@
                          <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
                     </div>
      
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/gift.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Exclusive Unlocked</p>
                               <p class="grey font-normal"><span>Arjun Malik</span> <span>7
                                         Jul 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                         <div class="font-semibold"> &#8377;<span>800</span></div>
                     </div>
 
                     <div class="my-4">
                          <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jun, 2021</p>
                     </div>
      
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/gift.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Livestream Booked</p>
                               <p class="grey font-normal"><span>Arjun Malik</span> <span>7
                                         Jul 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                         <div class="font-semibold"> &#8377;<span>800</span></div>
                     </div>
      
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/gift.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Gift Received</p>
                               <p class="grey font-normal"><span>Arjun Malik</span> <span>7
                                         Jul 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                         <div class="font-semibold"> &#8377;<span>800</span></div>
                     </div>
      
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/gift.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Service Booked</p>
                               <p style="color: rgba(147, 149, 153, 1);" class="font-normal"><span>Arjun Malik</span> <span>7
                                         Jul 2021</span></p>
                                         <img class="mt-1" src="../Icons/pending.svg" alt="">    
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
+                         <div class="font-semibold"> &#8377;<span>800</span></div>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/gift-greyed.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Service Cancelled</p>
                               <p class="grey font-normal"><span>Arjun Malik</span> <span>7
                                         Jul 2021</span></p>
                                         <img class="mt-1" src="../Icons/refunded.svg" alt="">
                          </div>
-                         <div style="flex: 1;" class="grey font-semibold"> &#8377;<span>800</span></div>
+                         <div class="grey font-semibold"> &#8377;<span>800</span></div>
                     </div>
      
                </div>
@@ -312,7 +308,7 @@
                     <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
                     class="mt-6 flex justify-between items-center pt-3">
                          <p class="font-semibold">Payments History</p>
-                         <div id="filter" onclick="openNav()">
+                         <div id="filter" class="filter-btn" onclick="openNav()">
                               <img src="../Icons/filter.svg" alt="">
                          </div>
                     </div>
@@ -321,87 +317,87 @@
                          <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/card-greyed.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Payout</p>
                               <p class="text-sm grey font-normal"> <span>18
                                         Jul 2021</span></p>
                                         <img class="mt-1" src="../Icons/failed.svg" alt="">
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/card.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Payout</p>
                               <p class="text-sm grey font-normal"> <span>11
                                         Jul 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/card.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Payout</p>
                               <p class="text-sm grey font-normal"> <span>4
                                         Jul 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
                     </div>
 
                     <div class="my-4">
                          <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jun, 2021</p>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/card.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Payout</p>
                               <p class="text-sm grey font-normal"> <span>27
                                         Jun 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/card.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Payout</p>
                               <p class="text-sm grey font-normal"> <span>26
                                         Jun 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
                     </div>
 
-                    <div id="component" style="display: flex; flex: 10; color: rgba(30, 34, 40, 1);" class="mb-4">
-                         <div style="flex: 2;">
+                    <div class="component mb-4">
+                         <div>
                               <img src="../Icons/card.svg" alt="">
                          </div>
-                         <div style="flex: 7;" class="font-semibold">
+                         <div class="font-semibold">
                               <p>Payout</p>
                               <p class="text-sm grey font-normal"> <span>25
                                         Jun 2021</span></p>
 
                          </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>31,000</span></div>
+                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
                     </div>
 
                </div>
@@ -411,8 +407,6 @@
      </script>
 
      <script src="handlebars-v4.7.7.js"></script>
-
-     <!-- <script src="route.js"></script> -->
 
      <script src="earnings.js"></script>
 

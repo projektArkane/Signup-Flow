@@ -49,13 +49,27 @@ function validate(boxid, textid) {
 function allFucntion() {
      if (document.getElementById("all-checkbox").checked) {
 
-          document.getElementById("all-text").style.color = "#EB612F";
-          document.getElementById("delivered-checkbox").checked = true;
-          document.getElementById("delivered-text").style.color = "#EB612F";
-          document.getElementById("pending-checkbox").checked = true;
-          document.getElementById("pending-text").style.color = "#EB612F";
-          document.getElementById("refund-checkbox").checked = true;
-          document.getElementById("refund-text").style.color = "#EB612F";
+          // document.getElementById("all-text").style.color = "#EB612F";
+          // document.getElementById("delivered-checkbox").checked = true;
+          // document.getElementById("delivered-text").style.color = "#EB612F";
+          // document.getElementById("pending-checkbox").checked = true;
+          // document.getElementById("pending-text").style.color = "#EB612F";
+          // document.getElementById("refund-checkbox").checked = true;
+          // document.getElementById("refund-text").style.color = "#EB612F";
+
+          const colorElementsList = document.querySelectorAll("#all-text, #delivered-text, #pending-text, #refund-text");
+          
+          const colorElementsArray = [...colorElementsList];
+          colorElementsArray.forEach(element => {
+               element.style.color = "#EB612F";
+           });
+
+          const checkboxElementsList = document.querySelectorAll("#delivered-checkbox, #pending-checkbox, #refund-checkbox");
+
+          const checkboxElementsArray = [...checkboxElementsList];
+          checkboxElementsArray.forEach(element => {
+               element.checked = true;
+           });
           
      } else {
           document.getElementById("all-text").style.color = "#939599";
@@ -102,7 +116,9 @@ function secallFunction() {
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-// document.getElementById("payout-btn").addEventListener("click", ())
+
+
+// ============================= Changing-Tabs ======================================
 
 function hideEarningsPage() {
      document.getElementById("earnings-tab").classList.add("hidden");
@@ -119,3 +135,16 @@ function showEarningnsPage() {
      document.getElementById("payout-btn").style.color = "rgba(147, 149, 153, 1)";
      document.getElementById("earnings-btn").style.color = "rgba(30, 34, 40, 1)";
 }
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+// document.querySelector(".component").addEventListener("click", () => {
+//           document.getElementById("earnings-btn").style.display = "none";
+// });
+
+
+// document.querySelectorAll(".component")[0].addEventListener("click", () => {
+//           document.getElementById("earnings-btn").style.display = "none";
+// });

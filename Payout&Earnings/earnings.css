@@ -59,7 +59,8 @@ body {
 }
 
 /* li:active {
-     color: rgba(30, 34, 40, 1);
+     border-radius: 5px;
+     background-color: rgba(30, 34, 40, 0.123);
 } */
 
 #earnings-btn {
@@ -209,3 +210,37 @@ form>div>label {
      transition: 0.45s;
      padding-top: 60px;
 }
+
+.head-btn {
+     cursor: pointer;
+}
+
+.filter-btn {
+     cursor: pointer;
+}
+
+/* ======================= Card-Component =========================== */
+
+.component {
+     cursor: pointer;
+     display: flex;
+     flex: 10;
+     color: rgba(30, 34, 40, 1);
+}
+
+.component:active {
+     transform: scale(.95);
+     transition: 0.5s ease;
+}
+
+.component > div:nth-child(1) {
+     flex: 2;
+}
+.component > div:nth-child(2) {
+     flex: 7;
+}
+.component > div:nth-child(3) {
+     flex: 1;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
