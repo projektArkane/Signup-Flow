@@ -87,6 +87,7 @@
                               <span class="checkmark"></span>
                          </label>
                     </div>
+
                     <div>
                          <label id="collection-text" class="container-checkbox">Collections
                               <input id="collection-checkbox" type="checkbox"
@@ -149,264 +150,134 @@
 
      </div>
 
-     <div id="handle"></div>
-
      <!-- =================================================================================== -->
 
-     <script id="raw-template" type="text/x-handlebars-template">
+     <div id="white" class="bg-white min-h-screen pt-5 mt-4 rounded-t-3xl">
 
+          <div id="earnings-tab" class="container">
 
-          <div id="white" class="bg-white min-h-screen pt-5 mt-4 rounded-t-3xl">
-     
-               <div id="earnings-tab" class="container">
-     
-                    <span style="color: #939599;">Total Earnings</span>
-                    <br>
-                    <span id="total-earnings-amt" style="color: rgba(30, 34, 40, 1);" class="font-bold text-2xl">
-                         <!-- &#8377 blank -->
-                    </span>
-     
-                    <div style="background-color: rgba(255, 246, 229, 1);"
-                         class="mt-3 w-full mx-auto rounded-lg p-3 flex gap-3">
-                         <div style="background-color: rgba(235, 97, 47, 1); width: 20px; height: 20px; border-radius: 50%;"
-                              class="mt-1 flex flex-shrink-0 justify-center items-center text-white text-sm">
-                              <p class="font-semibold">!</p>
-                         </div>
-     
-                         <div class="text-sm">
-                              <p class="font-semibold">2 orders worth &#8377;<span>1600</span> pending</p>
-                              <p class="">Complete the pending orders to recieve the amount</p>
-                         </div>
-                    </div>
-     
-                    <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
-                         class="mt-8 flex justify-between items-center pt-3">
-                         <p class="font-semibold">Orders History</p>
-                         <div id="filter" class="filter-btn" onclick="openNav()">
-                              <img src="../Icons/filter.svg" alt="">
-                         </div>
-                    </div>
-     
-                    <div class="my-4">
-                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
-                    </div>
-     
-                    <!-- ============================================ -->
-     
-                    <div class="component mb-4">
-                         <div id="gift">
-                              <img src="../Icons/gift.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Service Booked</p>
-                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
-                              <img class="mt-1" src="../Icons/pending.svg" alt="">
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>800</span></div>
-                    </div>
-     
-                    <div class="component mb-4">
-                         <div style="flex: 2;">
-                              <img src="../Icons/gift.svg" alt="">
-                         </div>
-                         <div style="flex: 7;" class="font-semibold">
-                              <p>Collection Renewed</p>
-                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
-  
-                         </div>
-                         <div style="flex: 1;" class="font-semibold"> &#8377;<span>800</span></div>
-                    </div>
-     
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/gift.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Exclusive Unlocked</p>
-                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
+               <span style="color: #939599;">Total Earnings</span>
+               <br>
+               <span id="total-earnings-amt" style="color: rgba(30, 34, 40, 1);" class="font-bold text-2xl">
+                    <!-- &#8377 blank -->
+               </span>
 
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>800</span></div>
+               <div style="background-color: rgba(255, 246, 229, 1);"
+                    class="mt-3 w-full mx-auto rounded-lg p-3 flex gap-3">
+                    <div style="background-color: rgba(235, 97, 47, 1); width: 20px; height: 20px; border-radius: 50%;"
+                         class="mt-1 flex flex-shrink-0 justify-center items-center text-white text-sm">
+                         <p class="font-semibold">!</p>
                     </div>
 
-                    <div class="my-4">
-                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jun, 2021</p>
+                    <div class="text-sm">
+                         <p class="font-semibold">2 orders worth &#8377;<span>1600</span> pending</p>
+                         <p class="">Complete the pending orders to recieve the amount</p>
                     </div>
-     
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/gift.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Livestream Booked</p>
-                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>800</span></div>
-                    </div>
-     
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/gift.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Gift Received</p>
-                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>800</span></div>
-                    </div>
-     
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/gift.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Service Booked</p>
-                              <p style="color: rgba(147, 149, 153, 1);" class="font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
-                                        <img class="mt-1" src="../Icons/pending.svg" alt="">    
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>800</span></div>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/gift-greyed.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Service Cancelled</p>
-                              <p class="grey font-normal"><span>Arjun Malik</span> <span>7
-                                        Jul 2021</span></p>
-                                        <img class="mt-1" src="../Icons/refunded.svg" alt="">
-                         </div>
-                         <div class="grey font-semibold"> &#8377;<span>800</span></div>
-                    </div>
-     
                </div>
 
-               <!-- ========================================== -->
-
-               <div id="payouts-tab" class="hidden container">
-
-                    <span style="color: #939599;">Payout Balance</span>
-                    <br>
-                    <span id="total-earnings-amt" style="color: rgba(30, 34, 40, 1);" class="font-bold text-2xl">
-                         &#8377 60,000
-                    </span>
-
-                    <div class="mt-3 flex items-center gap-2">
-                         <img src="../Icons/calendar.svg" alt="">
-                         <span class="text-sm">Next payout due on <strong>24 Jul, 2021</strong></span>
+               <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
+                    class="mt-8 flex justify-between items-center pt-3">
+                    <p class="font-semibold">Orders History</p>
+                    <div id="filter" class="filter-btn" onclick="openNav()">
+                         <img src="../Icons/filter.svg" alt="">
                     </div>
-
-                    <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
-                    class="mt-6 flex justify-between items-center pt-3">
-                         <p class="font-semibold">Payments History</p>
-                         <div id="filter" class="filter-btn" onclick="openNav()">
-                              <img src="../Icons/filter.svg" alt="">
-                         </div>
-                    </div>
-
-                    <div class="my-4">
-                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/card-greyed.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Payout</p>
-                              <p class="text-sm grey font-normal"> <span>18
-                                        Jul 2021</span></p>
-                                        <img class="mt-1" src="../Icons/failed.svg" alt="">
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/card.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Payout</p>
-                              <p class="text-sm grey font-normal"> <span>11
-                                        Jul 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/card.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Payout</p>
-                              <p class="text-sm grey font-normal"> <span>4
-                                        Jul 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
-                    </div>
-
-                    <div class="my-4">
-                         <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jun, 2021</p>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/card.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Payout</p>
-                              <p class="text-sm grey font-normal"> <span>27
-                                        Jun 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/card.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Payout</p>
-                              <p class="text-sm grey font-normal"> <span>26
-                                        Jun 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
-                    </div>
-
-                    <div class="component mb-4">
-                         <div>
-                              <img src="../Icons/card.svg" alt="">
-                         </div>
-                         <div class="font-semibold">
-                              <p>Payout</p>
-                              <p class="text-sm grey font-normal"> <span>25
-                                        Jun 2021</span></p>
-
-                         </div>
-                         <div class="font-semibold"> &#8377;<span>31,000</span></div>
-                    </div>
-
                </div>
-     
+
+               <div class="my-4">
+                    <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
+               </div>
+
           </div>
+
+          <!-- ========================================== -->
+
+          <div id="payouts-tab" class="hidden container">
+
+               <span style="color: #939599;">Payout Balance</span>
+               <br>
+               <span id="total-earnings-amt" style="color: rgba(30, 34, 40, 1);" class="font-bold text-2xl">
+                    &#8377 60,000
+               </span>
+
+               <div class="mt-3 flex items-center gap-2">
+                    <img src="../Icons/calendar.svg" alt="">
+                    <span class="text-sm">Next payout due on <strong>24 Jul, 2021</strong></span>
+               </div>
+
+               <div style="border-top: 1px solid rgba(239, 239, 240, 1);"
+                    class="mt-6 flex justify-between items-center pt-3">
+                    <p class="font-semibold">Payments History</p>
+                    <div id="filter" class="filter-btn" onclick="openNav()">
+                         <img src="../Icons/filter.svg" alt="">
+                    </div>
+               </div>
+
+               <div class="my-4">
+                    <p class="text-xs font-semibold" style="color: rgba(147, 149, 153, 1);">Jul, 2021</p>
+               </div>
+
+          </div>
+
+     </div>
+
+     <script src="handlebars-v4.7.7.js"></script>
+
+     <script id="earnings-raw-template" type="text/x-handlebars-template">
+
+          {{#each this}}
+               <div class="component mb-4" onclick="location.href='details.html';">
+                    <div>
+                         <img src="../Icons/gift.svg" alt="">
+                    </div>
+                    <div class="font-semibold">
+                         <p>{{this.type}}</p>
+                         <p class="grey font-normal"><span>Arjun Malik</span> <span>7
+                                   Jul 2021</span></p>
+                              {{#if this.pending}}
+                                   <img class="mt-1" src="../Icons/pending.svg" alt="">
+                              {{/if}}
+                                   
+                              {{#if this.refunded}}
+                                   <img class="mt-1" src="../Icons/refunded.svg" alt="">
+                              {{/if}}
+                         
+                    </div>
+                    <div class="font-semibold"> &#8377;<span>{{this.amount}}</span></div>
+               </div>
+          {{/each}}
 
      </script>
 
-     <script src="handlebars-v4.7.7.js"></script>
+     <script id="payouts-raw-template" type="text/x-handlebars-template">
+
+          {{#each this}}
+               <div id="cmpt" class="component mb-4">
+                    <div>
+                         {{#if this.failed}}
+                              <img src="../Icons/card-greyed.svg" alt="">
+                         {{else}}
+                              <img src="../Icons/card.svg" alt="">
+                         {{/if}}
+                    </div>
+                    <div class="font-semibold">
+                         <p>{{this.type}}</p>
+                         <p class="text-sm grey font-normal"> <span>18
+                                   Jul 2021</span></p>
+
+                         {{#if this.failed}}         
+                              <img class="mt-1" src="../Icons/failed.svg" alt="">
+                         {{/if}}
+                    </div>
+
+                    {{#if this.failed}} 
+                         <div style="color: rgba(200, 202, 204, 1);" class="font-semibold"> &#8377;<span>{{this.amount}}</span></div>
+                    {{else}}
+                         <div class="font-semibold"> &#8377;<span>{{this.amount}}</span></div>
+                    {{/if}}
+               </div>
+          {{/each}}
+
+     </script>
 
      <script src="earnings.js"></script>
 

@@ -1,0 +1,23 @@
+[
+     {
+          "id": 1,
+          "type": "Payouts",
+          "amount": 31400,
+          "pending": true,
+          "failed": true
+     },
+     {
+          "id": 2,
+          "type": "Payouts",
+          "amount": 31400,
+          "pending": false,
+          "failed": false
+     },
+     {
+          "id": 3,
+          "type": "Payouts",
+          "amount": 31400,
+          "pending": false,
+          "failed": false
+     }
+]

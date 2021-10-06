@@ -1,0 +1,25 @@
+[
+     {
+          "id": 1,
+          "type" : "Service Booked",
+          "amount": 800,
+          "pending": true,
+          "refunded": false
+     },
+
+     {
+          "id": 2,
+          "type" : "Collection Renewed",
+          "amount": 750,
+          "pending": false,
+          "refunded": false
+     },
+
+     {
+          "id": 3,
+          "type" : "Exclusive Unlocked",
+          "amount": 100,
+          "pending": false,
+          "refunded": false
+     }
+]

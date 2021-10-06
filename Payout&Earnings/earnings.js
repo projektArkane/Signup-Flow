@@ -1,14 +1,4 @@
 
-// ====================== HandleBars =============================
-
-var getRawTemplate = document.getElementById("raw-template").innerHTML;
-var template = Handlebars.compile(getRawTemplate);
-var data = template();
-
-document.getElementById("handle").innerHTML = data;
-
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 
 // ========= Total-Earnings ==============
 
@@ -20,7 +10,7 @@ document.getElementById("handle").innerHTML = data;
 //     lastThree = ',' + lastThree;
 // var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
 
-var totalEarnings = 560400; 
+var totalEarnings = 560400;
 var commaFormatted = (totalEarnings).toLocaleString('en-IN');
 
 document.getElementById("total-earnings-amt").innerHTML = `&#8377 ${commaFormatted}`;
@@ -49,73 +39,77 @@ function validate(boxid, textid) {
 function allFucntion() {
      if (document.getElementById("all-checkbox").checked) {
 
-          // document.getElementById("all-text").style.color = "#EB612F";
-          // document.getElementById("delivered-checkbox").checked = true;
-          // document.getElementById("delivered-text").style.color = "#EB612F";
-          // document.getElementById("pending-checkbox").checked = true;
-          // document.getElementById("pending-text").style.color = "#EB612F";
-          // document.getElementById("refund-checkbox").checked = true;
-          // document.getElementById("refund-text").style.color = "#EB612F";
-
           const colorElementsList = document.querySelectorAll("#all-text, #delivered-text, #pending-text, #refund-text");
-          
+
           const colorElementsArray = [...colorElementsList];
           colorElementsArray.forEach(element => {
                element.style.color = "#EB612F";
-           });
+          });
 
           const checkboxElementsList = document.querySelectorAll("#delivered-checkbox, #pending-checkbox, #refund-checkbox");
 
           const checkboxElementsArray = [...checkboxElementsList];
           checkboxElementsArray.forEach(element => {
                element.checked = true;
-           });
-          
+          });
+
      } else {
-          document.getElementById("all-text").style.color = "#939599";
-          document.getElementById("delivered-checkbox").checked = false;
-          document.getElementById("delivered-text").style.color = "#939599";
-          document.getElementById("pending-checkbox").checked = false;
-          document.getElementById("pending-text").style.color = "#939599";
-          document.getElementById("refund-checkbox").checked = false;
-          document.getElementById("refund-text").style.color = "#939599";
+
+          const colorElementsListTwo = document.querySelectorAll("#all-text, #delivered-text, #pending-text, #refund-text");
+
+          const colorElementsArrayTwo = [...colorElementsListTwo];
+          colorElementsArrayTwo.forEach(element => {
+               element.style.color = "#939599";
+          });
+
+          const checkboxElementsListTwo = document.querySelectorAll("#delivered-checkbox, #pending-checkbox, #refund-checkbox");
+
+          const checkboxElementsArrayTwo = [...checkboxElementsListTwo];
+          checkboxElementsArrayTwo.forEach(element => {
+               element.checked = false;
+          });
+
      }
 }
 
 function secallFunction() {
      if (document.getElementById("secall-checkbox").checked) {
 
-          document.getElementById("service-checkbox").checked = true;
-          document.getElementById("exclusive-checkbox").checked = true;
-          document.getElementById("collection-checkbox").checked = true;
-          document.getElementById("live-checkbox").checked = true;
-          document.getElementById("gift-checkbox").checked = true;
+          const checkboxElementsList = document.querySelectorAll("#service-checkbox, #exclusive-checkbox, #collection-checkbox, #live-checkbox, #gift-checkbox");
 
-          document.getElementById("secall-text").style.color = "#EB612F";
-          document.getElementById("service-text").style.color = "#EB612F";
-          document.getElementById("exclusive-text").style.color = "#EB612F";
-          document.getElementById("collection-text").style.color = "#EB612F";
-          document.getElementById("live-text").style.color = "#EB612F";
-          document.getElementById("gift-text").style.color = "#EB612F";
+          const checkboxElementsArray = [...checkboxElementsList];
+          checkboxElementsArray.forEach(element => {
+               element.checked = true;
+          });
+
+          const colorElementsList = document.querySelectorAll("#secall-text, #service-text, #exclusive-text, #collection-text, #live-text, #gift-text");
+
+          const colorElementsArray = [...colorElementsList];
+          colorElementsArray.forEach(element => {
+               element.style.color = "#EB612F";
+          });
 
      } else {
-          document.getElementById("service-checkbox").checked = false;
-          document.getElementById("exclusive-checkbox").checked = false;
-          document.getElementById("collection-checkbox").checked = false;
-          document.getElementById("live-checkbox").checked = false;
-          document.getElementById("gift-checkbox").checked = false;
 
-          document.getElementById("secall-text").style.color = "#939599";
-          document.getElementById("service-text").style.color = "#939599";
-          document.getElementById("exclusive-text").style.color = "#939599";
-          document.getElementById("collection-text").style.color = "#939599";
-          document.getElementById("live-text").style.color = "#939599";
-          document.getElementById("gift-text").style.color = "#939599";
+          const checkboxElementsListTwo = document.querySelectorAll("#service-checkbox, #exclusive-checkbox, #collection-checkbox, #live-checkbox, #gift-checkbox");
+
+          const checkboxElementsArrayTwo = [...checkboxElementsListTwo];
+          checkboxElementsArrayTwo.forEach(element => {
+               element.checked = false;
+          });
+
+
+          const colorElementsListTwo = document.querySelectorAll("#secall-text, #service-text, #exclusive-text, #collection-text, #live-text, #gift-text");
+
+          const colorElementsArrayTwo = [...colorElementsListTwo];
+          colorElementsArrayTwo.forEach(element => {
+               element.style.color = "#939599";
+          });
+
      }
 }
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 
 
 // ============================= Changing-Tabs ======================================
@@ -123,15 +117,15 @@ function secallFunction() {
 function hideEarningsPage() {
      document.getElementById("earnings-tab").classList.add("hidden");
      document.getElementById("payouts-tab").classList.remove("hidden");
+
      document.getElementById("payout-btn").style.color = "rgba(30, 34, 40, 1)";
      document.getElementById("earnings-btn").style.color = "rgba(147, 149, 153, 1)";
-
-
 }
 
 function showEarningnsPage() {
      document.getElementById("earnings-tab").classList.remove("hidden");
      document.getElementById("payouts-tab").classList.add("hidden");
+
      document.getElementById("payout-btn").style.color = "rgba(147, 149, 153, 1)";
      document.getElementById("earnings-btn").style.color = "rgba(30, 34, 40, 1)";
 }
@@ -140,11 +134,51 @@ function showEarningnsPage() {
 
 
 
-// document.querySelector(".component").addEventListener("click", () => {
-//           document.getElementById("earnings-btn").style.display = "none";
-// });
+// =====================================================================================
 
+// var earning = document.getElementById("earnings-tab");
 
-// document.querySelectorAll(".component")[0].addEventListener("click", () => {
-//           document.getElementById("earnings-btn").style.display = "none";
-// });
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "earnings.json");
+
+xhr.onload = function () {
+     if (xhr.status == 200) {
+          var data = JSON.parse(xhr.responseText);
+          // console.log(data[2].pending);
+
+          var insertHTML = function (ourData) {
+               var rawTemplate = document.getElementById("earnings-raw-template").innerHTML;
+               var template = Handlebars.compile(rawTemplate);
+               var generatedHTML = template(ourData);
+
+               document.getElementById("earnings-tab").innerHTML += generatedHTML;
+
+          };
+          insertHTML(data);
+     }
+}
+
+xhr.send();
+
+// =====================================
+
+var sxhr = new XMLHttpRequest();
+sxhr.open("GET", "payouts.json");
+
+sxhr.onload = function () {
+     if (sxhr.status == 200) {
+          var data = JSON.parse(sxhr.responseText);
+          console.log(data[1].amount);
+
+          var insertHTML = function(ourData) {
+               var rawTemplate = document.getElementById("payouts-raw-template").innerHTML;
+               var template = Handlebars.compile(rawTemplate);
+               var generatedHTML = template(ourData);
+               document.getElementById("payouts-tab").innerHTML += generatedHTML;
+          }
+          insertHTML(data);
+     }
+}
+
+sxhr.send();
+

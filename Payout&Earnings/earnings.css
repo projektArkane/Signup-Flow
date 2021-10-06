@@ -233,6 +233,11 @@ form>div>label {
      transition: 0.5s ease;
 }
 
+#filter:active {
+     transform: scale(0.9);
+     transition: 0.5s ease;
+}
+
 .component > div:nth-child(1) {
      flex: 2;
 }
