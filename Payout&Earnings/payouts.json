@@ -2,21 +2,28 @@
      {
           "id": 1,
           "type": "Payouts",
-          "amount": 31400,
+          "amount": "31,400",
           "pending": true,
           "failed": true
      },
      {
           "id": 2,
           "type": "Payouts",
-          "amount": 31400,
+          "amount": "31,400",
           "pending": false,
           "failed": false
      },
      {
           "id": 3,
           "type": "Payouts",
-          "amount": 31400,
+          "amount": "25,600",
+          "pending": false,
+          "failed": false
+     },
+     {
+          "id": 4,
+          "type": "Payouts",
+          "amount": "33,000",
           "pending": false,
           "failed": false
      }

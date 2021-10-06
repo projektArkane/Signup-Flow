@@ -18,7 +18,15 @@
      {
           "id": 3,
           "type" : "Exclusive Unlocked",
-          "amount": 100,
+          "amount": 500,
+          "pending": false,
+          "refunded": false
+     },
+
+     {
+          "id": 4,
+          "type" : "Livestream Booked",
+          "amount": 900,
           "pending": false,
           "refunded": false
      }

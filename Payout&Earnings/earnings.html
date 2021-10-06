@@ -225,7 +225,12 @@
      <script id="earnings-raw-template" type="text/x-handlebars-template">
 
           {{#each this}}
-               <div class="component mb-4" onclick="location.href='details.html';">
+
+          {{#if this.pending}}
+               <div class="component mb-4" onclick="location.href='pending.html'">
+          {{else}}
+               <div class="component mb-4" onclick="location.href='delivered.html'">
+          {{/if}}
                     <div>
                          <img src="../Icons/gift.svg" alt="">
                     </div>
