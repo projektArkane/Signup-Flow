@@ -227,7 +227,9 @@
           {{#each this}}
 
           {{#if this.pending}}
-               <div class="component mb-4" onclick="location.href='pending.html'">
+               <div class="component mb-4"  onclick="location.href='pending.html'">
+          {{else if this.refunded}}
+               <div class="component mb-4"  onclick="location.href='refunded.html'">
           {{else}}
                <div class="component mb-4" onclick="location.href='delivered.html'">
           {{/if}}
@@ -256,7 +258,13 @@
      <script id="payouts-raw-template" type="text/x-handlebars-template">
 
           {{#each this}}
-               <div id="cmpt" class="component mb-4">
+
+          {{#if this.failed}}
+               <div class="component mb-4" onclick="location.href='payout-failed.html'">
+          {{else}}
+               <div class="component mb-4" onclick="location.href='payout-successful.html'">
+          {{/if}}
+
                     <div>
                          {{#if this.failed}}
                               <img src="../Icons/card-greyed.svg" alt="">

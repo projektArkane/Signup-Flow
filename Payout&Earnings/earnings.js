@@ -1,5 +1,3 @@
-
-
 // ========= Total-Earnings ==============
 
 // var totalEarnings = 560400;
@@ -180,5 +178,5 @@ sxhr.onload = function () {
      }
 }
 
-sxhr.send();
+sxhr.send(); 
 

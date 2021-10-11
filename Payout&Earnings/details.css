@@ -68,3 +68,8 @@ body {
 #copy:active {
      transform: scale(0.9);
 }
+
+#chat-btn:active {
+     transform: scale(0.99);
+     /* transition: ease-in 0.5s; */
+}
