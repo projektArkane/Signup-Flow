@@ -52,17 +52,17 @@
                width: 20px;
                background-color: #eee;
                border-radius: 50%;
-               border: 2px solid rgba(200, 202, 204, 1);
+               /* border: 2px solid rgba(200, 202, 204, 1); */
           }
 
           /* On mouse-over, add a grey background color */
-          .radio-container:hover input~.checkmark {
+          /* .radio-container:hover input~.checkmark {
                background-color: #ccc;
-          }
+          } */
 
           /* When the radio button is checked, add a blue background */
           .radio-container input:checked~.checkmark {
-               background-color: #EB612F;
+               background-color: rgba(30, 34, 40, 1);
           }
 
           /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -79,14 +79,24 @@
 
           /* Style the indicator (dot/circle) */
           .radio-container .checkmark:after {
-               top: 5px;
+               /* top: 5px;
                left: 5px;
                width: 6px;
                height: 6px;
                border-radius: 50%;
-               background: white;
-          }
+               background: red; */
 
+               left: 8px;
+               top: 5px;
+               width: 3px;
+               height: 7px;
+               border: solid white;
+               border-width: 0 2px 2px 0;
+               -webkit-transform: rotate(45deg);
+               -ms-transform: rotate(45deg);
+               transform: rotate(45deg);
+
+          }
      </style>
 
 
