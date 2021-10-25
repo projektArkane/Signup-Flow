@@ -68,7 +68,7 @@ a:visited {
 }
 
 .page-heading {
-     font-size: 23px;
+     font-size: 25px;
      /* font-size: 23px; */
      color: #1E2228;
 }
@@ -89,7 +89,7 @@ a:visited {
      box-sizing: border-box;
      /* padding: 0 80px; */
      letter-spacing: 1px;
-     font-size: 1em;
+     font-size: 15px;
      font-weight: 400;
      border-radius: 26px;
      width: 100%;
@@ -194,7 +194,7 @@ a:visited {
 }
 
 #genre-selection-page > div > div:nth-child(3) >form > div > label {
-     font-size: 15px;
+     font-size: 16px;
 }
 
 #social-skill-page > div > div:nth-child(3) > div {
