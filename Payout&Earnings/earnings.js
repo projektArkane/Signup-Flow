@@ -139,7 +139,7 @@ function showEarningnsPage() {
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "earnings.json");
 
-xhr.onload = function () {
+xhr.onload = function () {    
      if (xhr.status == 200) {
           var data = JSON.parse(xhr.responseText);
           // console.log(data[2].pending);
