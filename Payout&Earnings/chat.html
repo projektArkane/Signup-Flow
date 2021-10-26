@@ -6,6 +6,8 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
      <link rel="stylesheet" href="chat.css">
 </head>
 
@@ -14,9 +16,10 @@
      <section class="msger">
           <header class="msger-header">
                <div class="msger-header-title">
-                    <i class="fas fa-comment-alt"></i> Arjun Malik
+                    <i class="fas fa-chevron-left"></i>
+                    <span style="padding-left: 15px;">Arjun Malik</span>
                </div>
-               <div style="width: 20%; display: flex; justify-content: space-around;">
+               <div style="width: 25%; display: flex; justify-content: space-around;">
                     <img src="../Icons/video call.svg" alt="">
                     <img src="../Icons/call-icon.svg" alt="">
                </div>
@@ -26,8 +29,9 @@
           </header>
 
           <div
-               style="margin-top: 20px; text-align: center; border-bottom: 1px solid #EFEFF0; padding-bottom: 10px; color: rgba(235, 97, 47, 1); font-weight: 600; font-size: 13px;">
+               style="margin-top: 20px; text-align: center; border-bottom: 1px solid #EFEFF0; padding-bottom: 15px; color: rgba(235, 97, 47, 1); font-weight: 600; font-size: 13px;">
                <span>Show order details</span>
+               <i class="fas fa-chevron-down"></i>
           </div>
 
           <main class="msger-chat">
@@ -73,11 +77,14 @@
      </section>
 
      <form class="msger-inputarea">
-          <input type="text" class="msger-input" placeholder="Message">
-          <button style="display: flex; background-color: transparent; position: relative; right: 60px;"
-               type="submit"><img src="../Icons/send-btn.svg"></button>
-          <img src="../Icons/mic.svg" alt="">
-          <img src="../Icons/gallery-icon.svg" alt="">
+          <input style="padding-left: 20px; font-size: 16px;" type="text" class="msger-input" placeholder="Message">
+          <button class="fb" style="all: unset; position: absolute; left: 12em; bottom: 20px; background-color: white;" type="submit"><i class="ficon far fa-paper-plane"></i></button>
+          <!-- <i class="ficon far fa-paper-plane"></i> -->
+          <!-- <button style="display: flex; background-color: white; position: relative; right: 60px;" type="submit"><img src="./Icons/send-btn.svg"></button> -->
+          <div class="msger-icons">
+               <img src="../Icons/mic.svg" alt="">
+               <img src="../Icons/gallery-icon.svg" alt="">
+          </div>
      </form>
 
      <script>
