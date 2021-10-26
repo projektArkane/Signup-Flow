@@ -158,6 +158,11 @@
    /* .msger-input:active {
         border: 1px solid black;
    } */
+
+   input {
+     all: unset;
+     }
+
    .msger-send-btn {
      margin-left: 10px;
      background: rgb(0, 196, 65);
