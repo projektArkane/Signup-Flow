@@ -176,6 +176,7 @@
    }
 
    .msger-icons {
+     display: flex;
         flex: 3;
    }
 
