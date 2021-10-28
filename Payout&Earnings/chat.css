@@ -61,7 +61,7 @@
      padding: 10px;
    }
    .msger-chat::-webkit-scrollbar {
-     width: 6px;
+     width: 3px;
    }
    .msger-chat::-webkit-scrollbar-track {
      background: #ddd;
@@ -89,7 +89,7 @@
    } */
    .msg-bubble {
         display: flex;
-     max-width: 270px;
+     max-width: 85%;
      padding: 15px;
      border-radius: 20px;
      background: var(--left-msg-bg);
