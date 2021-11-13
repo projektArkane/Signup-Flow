@@ -1,0 +1,21 @@
+.container {
+     padding: 0 5px;
+     width: 90%;
+     margin: auto;
+}
+
+.fb {
+     border: 1px solid black;
+}
+
+html, body {
+     font-family: 'Inter', sans-serif;
+}
+
+.three-boxes > div {
+     padding: 0 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 15px;
+}
