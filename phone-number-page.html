@@ -20,6 +20,29 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Renown</title>
+
+     <style>
+          input[type="text"]#phi {
+               -webkit-appearance:none!important;
+               color: black;
+               font-size: 16px;
+               width: 35px;
+               position: relative;
+               top: 35px;
+               left: 10px;
+          }
+
+          input[type="text"]#phone-number-input {
+               -webkit-appearance: none !important;
+               font-size: 16px;
+               /* border-left: 1px solid black; */
+               /* caret-color: transparent; */
+               /* border: 1px solid gray; */
+               /* border-right: 0px; */
+               /* outline: none; */
+          }
+     </style>
+
 </head>
 
 <body>
@@ -37,15 +60,12 @@
                               won’t be shown on your app</p>
                     </div>
 
-                    <div>
+                    <form action="">
+                         <input type="text" value="+91 I" id="phi" disabled />
+                         <input id="phone-number-input" class="username-input phone" type="text"
+                              placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}">
+                    </form>
 
-                         <p>+91 |</p>
-                         <form action="">
-                              <input class="username-input phone" type="text" placeholder="Phone Number" name="phone"
-                                   maxlength="10" pattern="[0-9]{10}">
-                         </form>
-
-                    </div>
 
                     <div>
                          <a href="verify-number-page.html">

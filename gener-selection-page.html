@@ -127,52 +127,52 @@
 
                          <form action="#" style="display: flex; flex-direction: column;">
 
-                              <div style="margin-top: 0px;">
+                              <div id="gnr" onclick="myFunction()" class="genre-boxes" style="margin-top: 0px;">
                                    <label for="fitness-coach" class="radio-container">Fitness Coach
                                         <input id="fitness-coach" type="radio" checked="checked" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
 
-                              <div>
+                              <div class="genre-boxes">
                                    <label for="video-creator" class="radio-container">Video Creator
                                         <input id="video-creator" type="radio" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
 
-                              <div>
+                              <div class="genre-boxes">
                                    <label for="performer" class="radio-container">Performer
                                         <input id="performer" type="radio" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
 
-                              <div>
+                              <div class="genre-boxes">
                                    <label for="photographer" class="radio-container">Photographer
                                         <input id="photographer" type="radio" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
-                              <div>
+                              <div class="genre-boxes">
                                    <label for="life-coach" class="radio-container">Life Coach
                                         <input id="life-coach" type="radio" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
-                              <div>
+                              <div class="genre-boxes">
                                    <label for="gaming-creator" class="radio-container">Gaming Creator
                                         <input id="gaming-creator" type="radio" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
-                              <div>
+                              <div class="genre-boxes">
                                    <label for="teacher-educator" class="radio-container">Teacher & Educator
                                         <input id="teacher-educator" type="radio" name="radio">
                                         <span class="checkmark"></span>
                                    </label>
                               </div>
-                              <div style="margin-bottom: 30px;">
+                              <div class="genre-boxes" style="margin-bottom: 30px;">
                                    <label for="artist-model" class="radio-container">Artist & Model
                                         <input id="artist-model" type="radio" name="radio">
                                         <span class="checkmark"></span>
@@ -200,6 +200,13 @@
      <script>
           feather.replace()
      </script>
+
+     <!-- <script>
+          function myFunction() {
+               document.getElementById("gnr").style.borderColor = "black";
+          }
+     </script> -->
+
 </body>
 
 </html>

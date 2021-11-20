@@ -28,6 +28,22 @@
           "type" : "Livestream Booked",
           "amount": 900,
           "pending": false,
+          "refunded": false
+     },
+
+     {
+          "id": 4,
+          "type" : "Livestream Booked",
+          "amount": 1200,
+          "pending": false,
           "refunded": true
+     },
+
+     {
+          "id": 4,
+          "type" : "Livestream Booked",
+          "amount": 2500,
+          "pending": false,
+          "refunded": false
      }
 ]
