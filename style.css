@@ -173,6 +173,7 @@ a:visited {
 
 #phone-number-page > div > form > input:focus {
      outline-color: black;
+     outline-width: 2px;
 }
 
 /* #create-username-page > div > div:nth-child(3) {
@@ -199,6 +200,7 @@ a:visited {
 
 #create-username-page > div > input:focus {
      outline-color: black;
+     outline-width: 2px;
 }
 
 #verify-number-page > div > div:nth-child(3) {
@@ -379,14 +381,12 @@ label {
 
 .social-username-input {
      font-family: 'Inter', sans-serif;
-     /* margin-left: 15px; */
-     /* width: 75%; */
-     /* height: 30px; */
      font-size: 16px;
 }
 
 .social-username-input:focus {
-     /* outline: none; */
+     outline-color: black;
+     outline-width: 2px;
 }
 
 
@@ -538,7 +538,3 @@ input[type=number] {
      gap: 15px;
      color: white;
 }
-
-/* .input-section {
-     border: 2px solid blueviolet;
-} */
