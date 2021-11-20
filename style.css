@@ -20,10 +20,6 @@ a:visited {
      color: white;
 }
 
-/* *:focus {
-     outline: none;
- } */
-
 .fake-border {
      border: 1px solid black;
 }
@@ -146,19 +142,8 @@ a:visited {
 }
 
 #social-skill-page > div > div:nth-child(2) {
-
      margin-top: 55px;
 }
-
-/* #phone-number-page > div > div:nth-child(3) {
-     margin-top: 45px;
-     border: 2px solid #1E2228;
-     border-radius: 10px;
-     padding-left: 10px;
-     height: 50px;
-     display: flex;
-     align-items: center;
-} */
 
 #phone-number-input {
      /* margin-top: 45px; */
@@ -172,19 +157,9 @@ a:visited {
 }
 
 #phone-number-page > div > form > input:focus {
-     outline-color: black;
-     outline-width: 2px;
+     outline: none;
+     border: 2px solid rgba(30, 34, 40, 1);
 }
-
-/* #create-username-page > div > div:nth-child(3) {
-     margin-top: 50px;
-     border: 2px solid rgba(239, 239, 240, 1);
-     border-radius: 10px;
-     padding-left: 10px;
-     height: 50px;
-     display: flex;
-     align-items: center;
-} */
 
 #create-username-page > div > input {
      margin-top: 50px ;
@@ -199,8 +174,8 @@ a:visited {
 }
 
 #create-username-page > div > input:focus {
-     outline-color: black;
-     outline-width: 2px;
+     outline: none;
+     border: 2px solid rgba(30, 34, 40, 1);
 }
 
 #verify-number-page > div > div:nth-child(3) {
@@ -222,27 +197,11 @@ a:visited {
      height: 50px;
 }
 
-/* #genre-selection-page > div > div:nth-child(3) >form > div:focus {
-     border: 1px solid black;
-} */
-
 #genre-selection-page > div > div:nth-child(3) >form > div > label {
      font-size: 16px;
 }
 
-/* #social-skill-page > div > div:nth-child(3) > div {
-     margin-top: 15px;
-     padding-left: 15px;
-     display: flex;
-     align-items: center;
-     border: 2px solid #EFEFF0;
-     border-radius: 10px;
-     height: 50px;
-} */
-
 #social-skill-page > div > div:nth-child(3) > input {
-     /* position: relative; */
-     /* margin-left: 35px; */
      padding-left: 50px;
      height: 50px;
      border-radius: 10px;
@@ -250,14 +209,16 @@ a:visited {
      border: 2px solid rgba(239, 239, 240, 1);
 }
 
+#social-skill-page > div > div:nth-child(3) > input:focus {
+     outline: none;
+     border: 2px solid rgba(30, 34, 40, 1);
+}
+
 #social-boxes {
      margin-top: 15px;
-     /* border: 1px solid black; */
-     /* position: relative; */
 }
 
 #social-skill-page > div > div:nth-child(3) > i {
-     /* display: block; */
      position: relative;
      top: 38px;
      left: 15px;
@@ -325,17 +286,6 @@ label {
      height: 45px;
 }
 
-/* #genre-selection-page > div > div:nth-child(4) > a > div {
-     background-color: #EB612F;
-     color: white;
-     border-radius: 50%; 
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 45px;
-     height: 45px;
-} */
-
 #create-username-page > div > div:nth-child(4) > a > div {
      background-color: rgba(30, 34, 40, 1);
      color: white;
@@ -382,11 +332,6 @@ label {
 .social-username-input {
      font-family: 'Inter', sans-serif;
      font-size: 16px;
-}
-
-.social-username-input:focus {
-     outline-color: black;
-     outline-width: 2px;
 }
 
 
@@ -439,11 +384,11 @@ label {
 
 /* ==================== Black-Bars ================================= */
 
-input {
+/* input {
      background-color: transparent;
      border: 0px solid;
      color: #1E2228;
- }
+ } */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
