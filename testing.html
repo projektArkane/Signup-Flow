@@ -1,14 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     
-     <input type="file" accept="image/*">
+<html>
 
+<head>
+     <title>Tab Component By Cristina Rojas</title>
+     <style>
+          h1 {
+               color: #3a86ff;
+          }
+
+          .container {
+               width: 800px;
+               height: 600px;
+          }
+
+          .subContainer {
+               width: 100%;
+               height: 100%;
+               background-color: #fb5607;
+               display: flex;
+               flex-direction: column;
+          }
+
+          .tabContainer {
+               display: flex;
+               flex-direction: row;
+          }
+
+          .tab {
+               height: 75px;
+               width: 150px;
+               text-transform: capitalize;
+          }
+
+          .activeTab {
+               background-color: #ff006e;
+               color: white;
+               text-align: center;
+          }
+
+          .tab:hover {
+               color: #ffbe0b;
+               cursor: pointer;
+          }
+
+          .inactiveTab {
+               height: 75px;
+               width: 150px;
+               background-color: #8338ec9e;
+               color: white;
+               text-align: center;
+               border-right: 1px solid #8338ec;
+          }
+
+          .inactiveTab:hover {
+               color: #ffbe0b;
+               cursor: pointer;
+          }
+
+          .content {
+               height: 100%;
+               width: 100%;
+               background-color: #ff006e;
+               color: white;
+               align-items: center;
+               justify-content: center;
+               display: flex;
+          }
+
+          p {
+               font-size: 38px;
+          }
+     </style>
+</head>
+
+<body>
+     <h1>Tab Component By Cristina Rojas</h1>
+     <section id="container" class="container">
+          <section id="subContainer" class="subContainer">
+               <section id="tabContainer" class="tabContainer"></section>
+          </section>
+     </section>
+     <script>
+          // Getting the base elements that are already in the HTML DOM
+const containerElement = document.getElementById('container');
+const tabContainerElement = document.getElementById('tabContainer');
+const subContainer = document.getElementById('subContainer');
+
+// Creating the content element
+const contentContainer = document.createElement('section');
+contentContainer.setAttribute('class', 'content');
+subContainer.appendChild(contentContainer);
+
+const contentParagraph = document.createElement('p'); // Creating element to insert the content text
+contentContainer.appendChild(contentParagraph); // Adding the paragraph to the contenContainer element
+
+// Data example response - data asynchronously 
+const response = [{ tabName: 'tab 1', content: 'content 1'}, { tabName: 'tab 2', content: 'content 2'}, { tabName: 'tab 3', content: 'content 3'}, { tabName: 'tab 4', content: 'content 4'}, { tabName: 'tab 5', content: 'content 5'}];
+
+// To go through each element of the response array
+for (let i = 0; i < response.length; i ++) {
+    // Creating tab elements 
+    let tab = document.createElement('section'); // Tab element
+    tab.setAttribute('id', 'tab-' + i); // Adding id to the tab element
+    tab.setAttribute('class', 'tab'); // Set default class to tab element
+
+    // Adding the activeTab class to the first element of the reponse array
+    if (i === 0) {
+        tab.classList.add("activeTab"); // Setting activeTab to the firsrt elemet of the array 
+        contentParagraph.textContent = response[i].content; // Inserting the content of the first element of the response array
+    } else {
+        tab.classList.add("inactiveTab"); // At this point all other elements are with inactiveTab class
+    }
+       
+    // Creating h2 element top set the name of each tab there
+    let tabName = document.createElement('h2'); // creating h2 element 
+        tabName.textContent = response[i].tabName; // Setting each name to the tabs
+        tab.appendChild(tabName); // Adding the h2 element to the tab element
+
+    // Adding tab element to subcontainer element
+    tabContainerElement.appendChild(tab);
+
+    // Adding click event to every tab 
+    tab.addEventListener('click', () => {
+
+        // When click happens then add inactive class to
+        [...document.getElementsByClassName("tab")].forEach(
+            (element, index, array) => {
+                element.classList.add("inactiveTab");
+            }
+        );
+
+        // Removing inactiveTab class of current clicked tab
+        tab.classList.remove("inactiveTab");
+
+         // Adding activeTab class of current clicked tab
+        tab.classList.add("activeTab");
+
+        // Calling the handlerContent to insert the content when current tab clicked
+        handlerContent(response[i]);
+    });
+}
+
+// Method to show content into the content element
+function handlerContent(item) {
+    contentParagraph.textContent = '';
+    contentParagraph.textContent = item.content;
+}
+     </script>
 </body>
+
 </html>

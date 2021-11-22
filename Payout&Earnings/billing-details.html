@@ -5,18 +5,24 @@
      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
      <link rel="stylesheet" href="payout-settings.css">
-     <link rel="stylesheet" href="kyc.css">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Billing Details</title>
+     <style>
+          .bd-boxes:focus {
+               outline-color: rgba(30, 34, 40, 1);
+              outline-width: 2px;
+               /* outline: none;
+               border: 2px solid black; */
+          }
+     </style>
 </head>
 
 <body>
@@ -31,9 +37,9 @@
 
           <div class="flex flex-col items-center">
 
-               <input
-               style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
-               type="text" placeholder="Enter Name">
+               <input class="bd-boxes"
+                    style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
+                    type="text" placeholder="Enter Name">
 
           </div>
 
@@ -41,7 +47,7 @@
 
           <div class="flex flex-col items-center">
 
-               <input
+               <input class="bd-boxes"
                     style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
                     type="text" placeholder="Enter Address">
 
@@ -51,7 +57,7 @@
 
           <div class="flex flex-col items-center">
 
-               <input
+               <input class="bd-boxes"
                     style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
                     type="text" placeholder="Enter Pincode">
 
@@ -61,7 +67,7 @@
 
           <div class="flex flex-col items-center">
 
-               <input
+               <input class="bd-boxes"
                     style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
                     type="text" placeholder="Enter City">
 
@@ -71,7 +77,7 @@
 
           <div class="flex flex-col items-center">
 
-               <input
+               <input class="bd-boxes"
                     style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
                     type="text" placeholder="Enter State">
 
@@ -81,7 +87,7 @@
 
           <div class="flex flex-col items-center">
 
-               <input
+               <input class="bd-boxes"
                     style="margin-top: 20px; height: 50px; width: 95%; padding-left: 10px; border: 2px solid rgba(239, 239, 240, 1); border-radius: 8px;"
                     type="text" placeholder="Enter GSTIN">
 
@@ -89,8 +95,8 @@
 
           <div class="flex flex-col items-center">
                <input
-               style="margin: 40px auto; height: 50px; border-radius: 25px; width: 90%; color: rgba(255, 255, 255, 1); background-color: rgba(30, 34, 40, 1);"
-               type="submit" value="Save">
+                    style="margin: 40px auto; height: 50px; border-radius: 25px; width: 90%; color: rgba(255, 255, 255, 1); background-color: rgba(30, 34, 40, 1);"
+                    type="submit" value="Save">
           </div>
 
 

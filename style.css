@@ -13,7 +13,6 @@ html, body {
 a {
      text-decoration: none;
      color: white;
-     /* all: unset; */
 }
 
 a:visited {
@@ -40,8 +39,6 @@ a:visited {
 
 @media (min-width: 640px) {
      .container {
-          /* border: 2px solid grey; */
-          /* border-radius: 30px; */
           padding: 20px 50px;
           width: 86%;
           max-width: 40%;
@@ -72,18 +69,15 @@ a:visited {
 .description {
      margin-top: 12px;
      font-size: 15px;
-     /* font-size: 13px; */
      color: #1E2228;
 }
 
 .btn {
-     /* all:initial; */
      display: flex;
      justify-content: center;
      align-items: center;
      color: white;
      box-sizing: border-box;
-     /* padding: 0 80px; */
      letter-spacing: 1px;
      font-size: 15px;
      font-weight: 400;
@@ -95,7 +89,6 @@ a:visited {
 
 .btn:active {
      transform: scale(0.99);
-     /* transition: ease-in 0.5s; */
 }
 
 
@@ -146,7 +139,6 @@ a:visited {
 }
 
 #phone-number-input {
-     /* margin-top: 45px; */
      border: 2px solid rgba(239, 239, 240, 1);
      border-radius: 10px;
      padding-left: 50px;
@@ -187,7 +179,6 @@ a:visited {
 }
 
 #genre-selection-page > div > div:nth-child(3) >form > div {
-     /* font-size: 10px; */
      margin-top: 20px;
      padding-left: 0px;
      display: flex;
@@ -229,7 +220,6 @@ label {
      align-items: center;
      margin-left: 15px;
      font-size: 1.1em;
-     /* border: 1px solid black; */
      width: 100%;
      height: 100%;
 }
@@ -322,11 +312,9 @@ label {
 
 .username-input {
      font-family: 'Inter', sans-serif;
-     /* margin-left: 15px; */
      width: 75%;
      height: 30px;
      font-size: 15px;
-     /* letter-spacing: 0.15mm; */
 }
 
 .social-username-input {
@@ -383,12 +371,6 @@ label {
 
 
 /* ==================== Black-Bars ================================= */
-
-/* input {
-     background-color: transparent;
-     border: 0px solid;
-     color: #1E2228;
- } */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -25,9 +25,17 @@
 
      {
           "id": 4,
-          "type" : "Livestream Booked",
+          "type" : "Service Booked",
           "amount": 900,
           "pending": false,
+          "refunded": false
+     },
+
+     {
+          "id": 4,
+          "type" : "Service Booked",
+          "amount": 800,
+          "pending": true,
           "refunded": false
      },
 

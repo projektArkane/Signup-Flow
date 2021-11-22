@@ -34,7 +34,6 @@ body {
 }
 
 .container {
-     /* display: none; */
      padding: 0 5px;
      width: 90%;
      margin: auto;
@@ -58,12 +57,7 @@ body {
 
 .row > div:nth-child(2) {
      color: rgba(30, 34, 40, 1);
-     /* font-weight: 600; */
 }
-
-/* .column {
-     flex: 50%;
-} */
 
 #copy:active {
      transform: scale(0.9);
@@ -71,5 +65,4 @@ body {
 
 #chat-btn:active {
      transform: scale(0.99);
-     /* transition: ease-in 0.5s; */
 }
