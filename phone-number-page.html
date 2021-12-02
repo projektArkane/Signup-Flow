@@ -37,6 +37,19 @@
                -webkit-appearance: none !important;
                font-size: 16px;
           }
+
+          #btn {
+               margin-left: 260px;
+               margin-top: 45px;
+          }
+
+          button {
+               all: unset;
+               width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background-color: rgba(30, 34, 40, 1);
+          }
      </style>
 
 </head>
@@ -56,20 +69,17 @@
                               won’t be shown on your app</p>
                     </div>
 
-                    <form action="">
+                    <form id="form" action="/verify-number-page.html">
                          <input type="text" value="+91 I" id="phi" disabled />
                          <input id="phone-number-input" class="username-input phone" type="text"
-                              placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}">
+                              placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+
+                         <div id="btn">                              
+                              <button id="summit" type="submit">
+                                   <i style="display: flex; margin: 0 auto; color: white;" data-feather="arrow-right"></i>
+                              </button>
+                         </div>
                     </form>
-
-
-                    <div>
-                         <a href="verify-number-page.html">
-                              <div>
-                                   <i data-feather="arrow-right"></i>
-                              </div>
-                         </a>
-                    </div>
 
                </div>
 
@@ -92,6 +102,18 @@
 
      <script>
           feather.replace()
+     </script>
+
+     <script defer>
+          const number = document.getElementById("phone-number-input");
+          const form = document.getElementById("form");
+
+          form.addEventListener("submit", (e) => {
+               if(number.value === "" || number.value == null) {
+                    e.preventDefault();
+                    number.style.borderColor = "red";
+               }
+          })
      </script>
 </body>
 

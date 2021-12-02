@@ -19,6 +19,20 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Renown</title>
+     <style>
+          #btn {
+               margin-left: 260px;
+               margin-top: 45px;
+          }
+
+          button {
+               all: unset;
+               width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background-color: rgba(30, 34, 40, 1);
+          }
+     </style>
 </head>
 
 <body>
@@ -41,15 +55,15 @@
                          <p class="description">This will be shown on your app. You’ll be able to change this later</p>
                     </div>
 
-                    <input type="text" placeholder="Username">
-
-                    <div>
-                         <a href="gener-selection-page.html">
-                              <div>
-                                   <i data-feather="arrow-right"></i>
-                              </div>
-                         </a>
-                    </div>
+                    <form action="/gener-selection-page.html">
+                         <input type="text" placeholder="Username" required>
+                         <div id="btn">
+                              <button id="summit" type="submit">
+                                   <i style="display: flex; margin: 0 auto; color: white;"
+                                        data-feather="arrow-right"></i>
+                              </button>
+                         </div>
+                    </form>
 
                </div>
 

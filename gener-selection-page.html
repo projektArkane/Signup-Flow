@@ -97,9 +97,23 @@
                transform: rotate(45deg);
 
           }
+
+          #btn {
+               position: fixed;
+               bottom: 40px;
+               right: 25px;
+               /* margin-left: 260px;
+               margin-top: 45px; */
+          }
+
+          button {
+               all: unset;
+               width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background-color: rgba(30, 34, 40, 1);
+          }
      </style>
-
-
 
 </head>
 
@@ -125,7 +139,8 @@
 
                     <div>
 
-                         <form action="#" style="display: flex; flex-direction: column;">
+                         <form id="genre-form" action="/social-skill-page.html"
+                              style="display: flex; flex-direction: column;">
 
                               <div id="gnr" onclick="myFunction()" class="genre-boxes" style="margin-top: 0px;">
                                    <label for="fitness-coach" class="radio-container">Fitness Coach
@@ -181,15 +196,16 @@
 
                          </form>
 
+                         <div id="btn">
+                              <button id="summit" type="submit" form="genre-form">
+                                   <i style="display: flex; margin: 0 auto; color: white;"
+                                        data-feather="arrow-right"></i>
+                              </button>
+                         </div>
+
                     </div>
 
-                    <div>
-                         <a href="social-skill-page.html" class="floating">
-                              <div>
-                                   <i data-feather="arrow-right"></i>
-                              </div>
-                         </a>
-                    </div>
+
 
                </div>
 

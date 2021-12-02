@@ -153,7 +153,7 @@ a:visited {
      border: 2px solid rgba(30, 34, 40, 1);
 }
 
-#create-username-page > div > input {
+#create-username-page > div > form > input {
      margin-top: 50px ;
      border: 2px solid rgba(239, 239, 240, 1);
      border-radius: 10px;
@@ -192,7 +192,7 @@ a:visited {
      font-size: 16px;
 }
 
-#social-skill-page > div > div:nth-child(3) > input {
+#social-skill-page > div > div:nth-child(3) > form > input {
      padding-left: 50px;
      height: 50px;
      border-radius: 10px;
@@ -205,11 +205,11 @@ a:visited {
      border: 2px solid rgba(30, 34, 40, 1);
 }
 
-#social-boxes {
+/* #social-boxes {
      margin-top: 15px;
-}
+} */
 
-#social-skill-page > div > div:nth-child(3) > i {
+#social-skill-page > div > div:nth-child(3) > form > i {
      position: relative;
      top: 38px;
      left: 15px;
@@ -399,11 +399,11 @@ input[type=number] {
       border: 2px solid black;
  }
 
- .floating {
+ /* .floating {
 	position:fixed;
 	bottom:40px;
 	right: 25px;
-}
+} */
 
 ::-webkit-input-placeholder {
      color: #C8CACC;

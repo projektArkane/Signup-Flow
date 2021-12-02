@@ -19,6 +19,22 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Renown</title>
+     
+     <style>
+          #btn {
+               position: fixed;
+               bottom: 40px;
+               right: 25px;
+          }
+
+          button {
+               all: unset;
+               width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background-color: rgba(30, 34, 40, 1);
+          }
+     </style>
 </head>
 
 <body>
@@ -38,46 +54,49 @@
 
                     <div>
                          <h1 class="page-heading">Add your social links</h1>
-                         <p class="description" style="margin-top: 10px;">It will help us to set up your app and help us to give you shoutouts</p>  
+                         <p class="description" style="margin-top: 10px;">It will help us to set up your app and help us
+                              to give you shoutouts</p>
                     </div>
 
                     <div id="social-boxes">
 
+                         <form id="social-links-form" action="/creating-app-page.html">
                               <i style="font-size: 1.5em;" class="fab fa-instagram"></i>
 
-                              <input id="instafield" class="social-username-input" type="text" placeholder="Enter Instagram Username">
+                              <input id="instafield" class="social-username-input" type="text"
+                                   placeholder="Enter Instagram Username">
 
 
                               <i style="font-size: 1.5em;" class="fab fa-facebook"></i>
 
-                              <input id="fbfield" class="social-username-input" type="text" placeholder="Enter Facebook Username">
+                              <input id="fbfield" class="social-username-input" type="text"
+                                   placeholder="Enter Facebook Username">
 
 
                               <i style="font-size: 1.5em;" class="fab fa-twitter"></i>
 
                               <input id="twitterfield" class="social-username-input" type="text"
-                              placeholder="Enter Twitter ID">
+                                   placeholder="Enter Twitter ID">
 
 
                               <i style="font-size: 1.5em;" class="fab fa-youtube"></i>
 
                               <input id="ytfield" class="social-username-input" type="text"
-                              placeholder="Enter Youtube Channel">
+                                   placeholder="Enter Youtube Channel">
+                         </form>
 
-                        
                     </div>
 
-                    <div style="margin-top: 130px; color: rgba(147, 149, 153, 1); font-weight: 600;" onclick="location.href='creating-app-page.html'">
-                      Skip   
+                    <div id="btn">
+                         <button id="summit" type="submit" form="social-links-form">
+                              <i style="display: flex; margin: 0 auto; color: white;"
+                                   data-feather="arrow-right"></i>
+                         </button>
                     </div>
 
-                    <div>
-                         <a href="creating-app-page.html">Skip</a>
-                         <a href="creating-app-page.html" class="floating">
-                              <div>
-                                   <i data-feather="arrow-right"></i>
-                              </div>
-                         </a>
+                    <div style="margin-top: 80px; color: rgba(147, 149, 153, 1); font-weight: 600;"
+                         onclick="location.href='creating-app-page.html'">
+                         Skip
                     </div>
 
                </div>

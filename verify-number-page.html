@@ -19,6 +19,21 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Renown</title>
+
+     <style>
+          #btn {
+               margin-left: 260px;
+               margin-top: 45px;
+          }
+
+          button {
+               all: unset;
+               width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background-color: rgba(30, 34, 40, 1);
+          }
+     </style>
 </head>
 
 <body>
@@ -27,7 +42,8 @@
 
                <div>
                     <div style="font-size: 1.3em;">
-                         <a href="phone-number-page.html"><i style="color: #1E2228;" class="fas fa-chevron-left"></i></a>
+                         <a href="phone-number-page.html"><i style="color: #1E2228;"
+                                   class="fas fa-chevron-left"></i></a>
                     </div>
 
                     <div>
@@ -37,27 +53,30 @@
 
                     <div style="border: none; display: flex; flex-direction: column; align-items: flex-start;">
 
-                         <form>
-                              <input class="otp-box" id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)"
-                                   onfocus="onFocusEvent(1)" />
-                              <input class="otp-box" id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)"
-                                   onfocus="onFocusEvent(2)" />
-                              <input class="otp-box" id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)"
-                                   onfocus="onFocusEvent(3)" />
-                              <input class="otp-box" id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)"
-                                   onfocus="onFocusEvent(4)" />
+                         <form id="my-form" action="/create-username-page.html">
+                              <input class="otp-box" id="codeBox1" type="number" maxlength="1"
+                                   onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)" required />
+                              <input class="otp-box" id="codeBox2" type="number" maxlength="1"
+                                   onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)" required />
+                              <input class="otp-box" id="codeBox3" type="number" maxlength="1"
+                                   onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)" required />
+                              <input class="otp-box" id="codeBox4" type="number" maxlength="1"
+                                   onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)" required />
+
                          </form>
-     
-                         <p style="padding-top: 20px;">Resend Code in <span style="font-weight: 600;">00 : </span><span style="font-weight: 600;" id="countdown">30</span></p>
-     
+
+
+
                     </div>
 
-                    <div>
-                         <a href="create-username-page.html">
-                              <div>
-                                   <i data-feather="arrow-right"></i>
-                              </div>
-                         </a>
+                    <p style="padding-top: 20px;">Resend Code in <span style="font-weight: 600;">00 : </span><span
+                              style="font-weight: 600;" id="countdown">30</span></p>
+
+                    <div id="btn">
+                         <button style="display: block;" id="summit" type="submit" form="my-form">
+                              <i style="display: flex; margin: 0 auto; color: white;"
+                                   data-feather="arrow-right"></i>
+                         </button>
                     </div>
 
                </div>
