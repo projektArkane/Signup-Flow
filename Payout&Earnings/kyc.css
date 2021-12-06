@@ -1,0 +1,55 @@
+.kyc-btn {
+     all: unset;
+     margin-top: 30px;
+     margin-bottom: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     width: 90%;
+     height: 50px;
+     border-radius: 25px;
+     background-color: rgba(30, 34, 40, 1);
+}
+
+.pan-input {
+     margin-top: 20px;
+     height: 50px;
+     width: 95%;
+     padding-left: 10px;
+     border: 2px solid rgba(239, 239, 240, 1);
+     border-radius: 8px;
+}
+
+.pan-input:focus {
+     outline: darkblue;
+     border: 2px solid black;
+}
+
+.photo-box {
+     margin-top: 20px;
+     height: 200px;
+     width: 95%; 
+     padding: 0 10px 0 10px;
+     border: 2px dashed rgba(239, 239, 240, 1);
+     border-radius: 8px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.aadhar-input {
+     margin-top: 20px;
+     height: 50px;
+     width: 95%;
+     padding-left: 10px;
+     border: 2px solid rgba(239, 239, 240, 1);
+     border-radius: 8px;
+}
+
+.aadhar-input:focus {
+     outline: darkblue;
+     border: 2px solid black;
+}

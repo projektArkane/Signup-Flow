@@ -23,7 +23,7 @@
 
      <style>
           input[type="text"]#phi {
-               -webkit-appearance:none!important;
+               -webkit-appearance: none !important;
                color: black;
                border: none;
                font-size: 16px;
@@ -42,6 +42,12 @@
                position: fixed;
                margin-top: 50px;
                right: 30px;
+          }
+
+          #error-msg {
+               color: red;
+               font-size: 13px;
+               margin-top: 8px;
           }
 
           button {
@@ -70,14 +76,16 @@
                               won’t be shown on your app</p>
                     </div>
 
-                    <form id="form" action="/verify-number-page.html">
+                    <form id="form" action="#">
                          <input type="text" value="+91 I" id="phi" disabled />
                          <input id="phone-number-input" class="username-input phone" type="text"
-                              placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+                              placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}">
+                         <div id="error-msg"></div>
 
-                         <div id="btn">                              
+                         <div id="btn">
                               <button id="summit" type="submit">
-                                   <i style="display: flex; margin: 0 auto; color: white;" data-feather="arrow-right"></i>
+                                   <i style="display: flex; margin: 0 auto; color: white;"
+                                        data-feather="arrow-right"></i>
                               </button>
                          </div>
                     </form>
@@ -108,12 +116,26 @@
      <script defer>
           const number = document.getElementById("phone-number-input");
           const form = document.getElementById("form");
+          const errorElement = document.getElementById("error-msg");
+
+          // number.onchange = handleChange;
+
+          // function handleChange(e) {
+          //      errorElement.innerText = "nice";
+          // }
 
           form.addEventListener("submit", (e) => {
-               if(number.value === "" || number.value == null) {
+               if (number.value.toString().length < 10) {
                     e.preventDefault();
+                    errorElement.innerText = "Enter a valid phone number";
                     number.style.borderColor = "red";
                }
+
+               if (number.value.toString().length == 10) {
+                    
+               }
+
+
           })
      </script>
 </body>

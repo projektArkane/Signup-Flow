@@ -1,151 +1,156 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-     <title>Tab Component By Cristina Rojas</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <style>
-          h1 {
-               color: #3a86ff;
+          * {
+               box-sizing: border-box
           }
 
-          .container {
-               width: 800px;
-               height: 600px;
+          /* Set height of body and the document to 100% */
+          body,
+          html {
+               /* height: 100%; */
+               margin: 0;
+               font-family: Arial;
           }
 
-          .subContainer {
-               width: 100%;
-               height: 100%;
-               background-color: #fb5607;
-               display: flex;
-               flex-direction: column;
-          }
-
-          .tabContainer {
-               display: flex;
-               flex-direction: row;
-          }
-
-          .tab {
-               height: 75px;
-               width: 150px;
-               text-transform: capitalize;
-          }
-
-          .activeTab {
-               background-color: #ff006e;
+          /* Style tab links */
+          .tablink {
+               background-color: #555;
                color: white;
-               text-align: center;
-          }
-
-          .tab:hover {
-               color: #ffbe0b;
+               float: left;
+               border: none;
+               outline: none;
                cursor: pointer;
+               padding: 14px 16px;
+               font-size: 17px;
+               width: 25%;
           }
 
-          .inactiveTab {
-               height: 75px;
-               width: 150px;
-               background-color: #8338ec9e;
+          .tablink:hover {
+               background-color: #777;
+          }
+
+          /* Style the tab content (and add height:100% for full page content) */
+          .tabcontent {
                color: white;
-               text-align: center;
-               border-right: 1px solid #8338ec;
+               display: none;
+               padding: 100px 20px;
+               /* height: 100%; */
           }
 
-          .inactiveTab:hover {
-               color: #ffbe0b;
-               cursor: pointer;
+          #Home {
+               background-color: red;
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+               grid-auto-rows: 75px;
           }
 
-          .content {
-               height: 100%;
-               width: 100%;
-               background-color: #ff006e;
-               color: white;
-               align-items: center;
-               justify-content: center;
-               display: flex;
+          #News {
+               background-color: green;
           }
 
-          p {
-               font-size: 38px;
+          #Contact {
+               background-color: blue;
+          }
+
+          #About {
+               background-color: orange;
           }
      </style>
 </head>
 
 <body>
-     <h1>Tab Component By Cristina Rojas</h1>
-     <section id="container" class="container">
-          <section id="subContainer" class="subContainer">
-               <section id="tabContainer" class="tabContainer"></section>
-          </section>
-     </section>
+
+     <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+     <button class="tablink" onclick="openPage('News', this, 'green')">News</button>
+     <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+     <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+     <div id="Home" class="tabcontent">
+
+          <div>               
+               <img src="https://images.unsplash.com/photo-1638399777091-5b50ce3291f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" width="80%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1638225304129-eae5c3604d9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+               width="100%">
+          </div>
+          
+          <div>
+               <img src="https://images.unsplash.com/photo-1633114073758-c4be9aeb15ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+               width="100%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1638376851565-42db4491b05b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+               width="100%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+               width="100%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+               width="100%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1531347387918-af516d1e939c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+               width="100%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1633113089635-115b38c66c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+               width="100%">
+          </div>
+
+          <div>
+               <img src="https://images.unsplash.com/photo-1638380309284-1de74cf67aca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+               width="100%">
+          </div>
+
+     </div>
+
+     <div id="News" class="tabcontent">
+          <h3>News</h3>
+          <p>Some news this fine day!</p>
+     </div>
+
+     <div id="Contact" class="tabcontent">
+          <h3>Contact</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+     </div>
+
+     <div id="About" class="tabcontent">
+          <h3>About</h3>
+          <p>Who we are and what we do.</p>
+     </div>
+
      <script>
-          // Getting the base elements that are already in the HTML DOM
-const containerElement = document.getElementById('container');
-const tabContainerElement = document.getElementById('tabContainer');
-const subContainer = document.getElementById('subContainer');
+          function openPage(pageName, elmnt, color) {
+               var i, tabcontent, tablinks;
+               tabcontent = document.getElementsByClassName("tabcontent");
+               for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+               }
+               tablinks = document.getElementsByClassName("tablink");
+               for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+               }
+               document.getElementById(pageName).style.display = "block";
+               elmnt.style.backgroundColor = color;
+          }
 
-// Creating the content element
-const contentContainer = document.createElement('section');
-contentContainer.setAttribute('class', 'content');
-subContainer.appendChild(contentContainer);
-
-const contentParagraph = document.createElement('p'); // Creating element to insert the content text
-contentContainer.appendChild(contentParagraph); // Adding the paragraph to the contenContainer element
-
-// Data example response - data asynchronously 
-const response = [{ tabName: 'tab 1', content: 'content 1'}, { tabName: 'tab 2', content: 'content 2'}, { tabName: 'tab 3', content: 'content 3'}, { tabName: 'tab 4', content: 'content 4'}, { tabName: 'tab 5', content: 'content 5'}];
-
-// To go through each element of the response array
-for (let i = 0; i < response.length; i ++) {
-    // Creating tab elements 
-    let tab = document.createElement('section'); // Tab element
-    tab.setAttribute('id', 'tab-' + i); // Adding id to the tab element
-    tab.setAttribute('class', 'tab'); // Set default class to tab element
-
-    // Adding the activeTab class to the first element of the reponse array
-    if (i === 0) {
-        tab.classList.add("activeTab"); // Setting activeTab to the firsrt elemet of the array 
-        contentParagraph.textContent = response[i].content; // Inserting the content of the first element of the response array
-    } else {
-        tab.classList.add("inactiveTab"); // At this point all other elements are with inactiveTab class
-    }
-       
-    // Creating h2 element top set the name of each tab there
-    let tabName = document.createElement('h2'); // creating h2 element 
-        tabName.textContent = response[i].tabName; // Setting each name to the tabs
-        tab.appendChild(tabName); // Adding the h2 element to the tab element
-
-    // Adding tab element to subcontainer element
-    tabContainerElement.appendChild(tab);
-
-    // Adding click event to every tab 
-    tab.addEventListener('click', () => {
-
-        // When click happens then add inactive class to
-        [...document.getElementsByClassName("tab")].forEach(
-            (element, index, array) => {
-                element.classList.add("inactiveTab");
-            }
-        );
-
-        // Removing inactiveTab class of current clicked tab
-        tab.classList.remove("inactiveTab");
-
-         // Adding activeTab class of current clicked tab
-        tab.classList.add("activeTab");
-
-        // Calling the handlerContent to insert the content when current tab clicked
-        handlerContent(response[i]);
-    });
-}
-
-// Method to show content into the content element
-function handlerContent(item) {
-    contentParagraph.textContent = '';
-    contentParagraph.textContent = item.content;
-}
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
      </script>
+
 </body>
 
 </html>
