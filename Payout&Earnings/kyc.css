@@ -1,5 +1,5 @@
 .kyc-btn {
-     all: unset;
+     /* all: unset; */
      margin-top: 30px;
      margin-bottom: 20px;
      display: flex;
@@ -52,4 +52,114 @@
 .aadhar-input:focus {
      outline: darkblue;
      border: 2px solid black;
+}
+
+.pan-file-input {
+     width: 130px;
+     color: transparent;
+}
+
+.pan-file-input::-webkit-file-upload-button {
+     visibility: hidden;
+}
+
+.pan-file-input::before {
+     content: 'Upload Photo';
+     color: rgba(235, 97, 47, 1);
+     display: inline-block;
+     /* background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3); */
+     /* border: 1px solid #999; */
+     border-radius: 3px;
+     padding: 5px 8px;
+     outline: none;
+     white-space: nowrap;
+     cursor: pointer;
+}
+
+.pan-file-input:hover::before {
+     border-color: black;
+}
+
+.pan-file-input:active {
+     outline: 0;
+     background-color: transparent;
+}
+
+.pan-file-input:active::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.aadhar-front-file-input {
+     width: 200px;
+     color: transparent;
+}
+
+.aadhar-front-file-input::-webkit-file-upload-button {
+     visibility: hidden;
+}
+
+.aadhar-front-file-input::before {
+     content: 'Upload Front-Side Photo';
+     color: rgba(235, 97, 47, 1);
+     display: inline-block;
+     /* background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3); */
+     /* border: 1px solid #999; */
+     border-radius: 3px;
+     padding: 5px 8px;
+     outline: none;
+     white-space: nowrap;
+     cursor: pointer;
+}
+
+.aadhar-front-file-input:hover::before {
+     border-color: black;
+}
+
+.aadhar-front-file-input:active {
+     outline: 0;
+     background-color: transparent;
+}
+
+.aadhar-front-file-input:active::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+
+.aadhar-back-file-input {
+     width: 200px;
+     color: transparent;
+}
+
+.aadhar-back-file-input::-webkit-file-upload-button {
+     visibility: hidden;
+}
+
+.aadhar-back-file-input::before {
+     content: 'Upload Back-Side Photo';
+     color: rgba(235, 97, 47, 1);
+     display: inline-block;
+     /* background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3); */
+     /* border: 1px solid #999; */
+     border-radius: 3px;
+     padding: 5px 8px;
+     outline: none;
+     white-space: nowrap;
+     cursor: pointer;
+}
+
+.aadhar-back-file-input:hover::before {
+     border-color: black;
+}
+
+.aadhar-back-file-input:active {
+     outline: 0;
+     background-color: transparent;
+}
+
+.aadhar-back-file-input:active::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.fb {
+     border: 1px solid black;
 }

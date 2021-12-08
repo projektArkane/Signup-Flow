@@ -1,0 +1,180 @@
+import React from 'react';
+import { Text, View, ScrollView } from 'react-native';
+
+import Icons from 'react-native-vector-icons/Entypo'
+import AntIcons from 'react-native-vector-icons/AntDesign'
+import Mess from 'react-native-vector-icons/MaterialCommunityIcons'
+import Feather from 'react-native-vector-icons/Feather'
+import Fire from 'react-native-vector-icons/Fontisto'
+import Community from 'react-native-vector-icons/MaterialCommunityIcons'
+import Material from 'react-native-vector-icons/MaterialIcons'
+
+const HelloWorldApp = () => {
+  return (
+    <View style={{
+      display: 'flex',
+      flex: 1,
+      flexDirection: 'column',
+      backgroundColor: '#1E2228'
+    }}>
+
+      <ScrollView  bounces={false}>
+
+        <View style={{ flex: 2 }}>
+          <View style={{
+            padding: 10,
+            paddingLeft: 15,
+            marginTop: 20,
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'row',
+
+          }}>
+            <Icons style={{ marginRight: 10 }} name='menu' size={30} color="white" />
+            <AntIcons name='staro' size={30} color="white" />
+            <Text style={{
+              marginLeft: 5,
+              color: 'white',
+              fontSize: 18,
+              fontWeight: 'bold',
+            }}>RENOWN</Text>
+            <Mess style={{
+              position: 'relative',
+              left: 185
+            }} name="message-text-outline" size={30} />
+          </View>
+
+          <View style={{ marginLeft: 20, marginTop: 20 }}>
+            <Text style={{ color: 'white', fontSize: 18 }}>Hi, Mandana 👋</Text>
+            <Text style={{ marginTop: 5, color: 'white', fontSize: 20, fontWeight: 'bold' }}>You have no pending tasks</Text>
+          </View>
+        </View>
+
+        <View style={{
+          paddingBottom: 70,
+          padding: 10,
+          marginTop: 30,
+          flex: 8,
+          backgroundColor: 'white',
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20
+        }}>
+
+          <View style={{ marginTop: 12, marginLeft: 15, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <Fire name='fire' size={28} color='#E53939' />
+            <Text style={{ marginLeft: 10, color: 'black', fontSize: 19, fontWeight: 'bold' }}>Upcoming Live Stream</Text>
+          </View>
+
+          <View style={{
+            marginTop: 20,
+            display: 'flex',
+            alignItems: 'center'
+          }}>
+            <View style={{
+              borderRadius: 12,
+              width: '95%',
+              height: 200,
+              backgroundColor: '#E8EFFC',
+              padding: 20
+            }}>
+              <Text style={{ color: '#1E2228', fontSize: 16, fontWeight: '500' }}>Learn Marketing Tips</Text>
+              <Text style={{ marginTop: 6, color: '#1E2228' }}>Today @ 5:00 pm<Text style={{ fontWeight: '800' }}>  .  </Text>{'\u20B9'}49</Text>
+              <View style={{ marginTop: 30, display: 'flex', alignItems: 'center', flexDirection: 'row', position: 'relative' }}>
+                <View style={{ width: 30, height: 30, backgroundColor: '#24B29B', borderRadius: 15, borderWidth: 1, borderColor: 'white' }}></View>
+                <View style={{ position: 'absolute', left: 15, width: 30, height: 30, backgroundColor: '#E53939', borderRadius: 15, borderWidth: 1, borderColor: 'white' }}></View>
+                <View style={{ position: 'absolute', left: 30, width: 30, height: 30, backgroundColor: '#1E2228', borderRadius: 15, borderWidth: 1, borderColor: 'white' }}></View>
+                <Text style={{ color: '#1E2228', fontSize: 16, marginLeft: 30 }}> + 35 Booked This</Text>
+              </View>
+
+              <View
+                style={{
+                  paddingTop: 10,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginTop: 18,
+                  borderTopColor: '#C7D3EC',
+                  borderTopWidth: 1,
+                }}
+              >
+                <AntIcons name='sharealt' color='black' size={25} />
+                <Text style={{ marginLeft: 15, color: '#1E2228', fontSize: 16 }}>Share</Text>
+
+                <Feather style={{ marginLeft: 40 }} name='bell' color='black' size={25} />
+                <Text style={{ marginLeft: 15, color: '#1E2228', fontSize: 16 }}>Send Notifications</Text>
+
+              </View>
+            </View>
+          </View>
+
+          <View>
+            <Text style={{ marginLeft: 15, marginTop: 25, color: '#1E2228', fontSize: 18, fontWeight: 'bold' }}>Payment Summary</Text>
+            <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', height: 120, width: '100%' }}>
+              <View style={{ padding: 15, display: 'flex', justifyContent: 'center', width: '45%', height: 100, borderRadius: 12, backgroundColor: '#E9F7F5' }}>
+                <Text style={{ color: '#1E2228', fontSize: 15, fontWeight: '500' }}>Earned this month</Text>
+                <Text style={{ marginTop: 5, color: '#1E2228', fontSize: 23, fontWeight: 'bold' }}>{'\u20B9'} 20K</Text>
+              </View>
+              <View style={{ padding: 15, display: 'flex', justifyContent: 'center', width: '42%', height: 100, borderRadius: 12, backgroundColor: '#FEF6EA' }}>
+                <Text style={{ color: '#1E2228', fontSize: 15, fontWeight: '500' }}>Total Paid</Text>
+                <Text style={{ marginTop: 5, color: '#1E2228', fontSize: 23, fontWeight: 'bold' }}>{'\u20B9'} 17,550</Text>
+              </View>
+            </View>
+
+            <View style={{ marginTop: 8, marginLeft: 15, paddingLeft: 10, borderTopRightRadius: 12, borderBottomLeftRadius: 12, borderBottomRightRadius: 12, display: 'flex', justifyContent: 'center', width: '70%', height: 30, backgroundColor: '#1E2228' }}>
+              <Text style={{ color: 'white' }}>₹2,450 Payout due on 24 Jul, 2021</Text>
+            </View>
+          </View>
+
+
+          <View style={{ marginLeft: 15 }}>
+            <Text style={{ marginTop: 25, color: '#1E2228', fontSize: 18, fontWeight: 'bold' }}>Promote your app</Text>
+            <Text style={{ marginTop: 3, color: '#939599', fontSize: 13, fontWeight: '400' }}>Keep your followers in the loop</Text>
+
+            <Text style={{ marginTop: 20, color: '#939599', fontSize: 13, fontWeight: '400' }}>Share your App Link</Text>
+
+
+            <View style={{ display: 'flex', alignItems: 'center' }}>
+              <View style={{ position: 'relative', paddingLeft: 10, display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 10, width: '100%', height: 50, backgroundColor: '#F5F6F9', borderRadius: 10 }}>
+                <Feather name='link-2' color='#1E2228' size={30} />
+                <Text style={{ paddingLeft: 10, color: '#939599', fontSize: 13, fontWeight: '400' }}>Renown.club/Xrt45G6</Text>
+                <Community style={{ position: 'absolute', right: 20 }} name='content-copy' color='#1E2228' size={25} />
+              </View>
+            </View>
+
+            <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', paddingLeft: 20, marginTop: 20, borderRadius: 24, width: 160, height: 50, backgroundColor: '#1E2228' }}>
+              <AntIcons name='sharealt' color='white' size={25} />
+              <Text style={{ fontSize: 15, marginLeft: 10, color: 'white' }}>Share Link</Text>
+            </View>
+
+            <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', flex: 10, marginTop: 30, height: 70, borderTopWidth: 1, borderTopColor: '#EFEFF0', borderBottomWidth: 1, borderBottomColor: '#EFEFF0' }}>
+              <Feather style = {{flex: 1}} name='bell' color='#1E2228' size={30} />
+              <Text style = {{marginLeft: 5, flex: 8, color: '#1E2228', fontSize: 15}}>Send Notifications</Text>
+              <Material style = {{flex: 1}} name='navigate-next' color='#1E2228' size={30} />
+            </View>
+
+            <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', flex: 10, marginTop: 10, height: 50 }}>
+              <Community style = {{flex: 1}} name='radio-tower' color='#1E2228' size={30} />
+              <Text style = {{marginLeft: 5, flex: 8, color: '#1E2228', fontSize: 15}}>Broadcast Message</Text>
+              <Material style = {{flex: 1}} name='navigate-next' color='#1E2228' size={30} />
+            </View>
+
+          </View>
+
+        </View>
+
+      </ScrollView>
+
+      <View style={{ backgroundColor: '#F6F6F6', padding: 10, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', position: 'absolute', bottom: 0, width: '100%', height: 64 }}>
+        <Icons name='home' color='#1E2228' size={30} />
+        <Feather name='eye' color='#1E2228' size={30} />
+        <AntIcons name='plus' color='#1E2228' size={30} />
+        <Feather name='bell' color='#1E2228' size={30} />
+        <Community name='power-sleep' color='#1E2228' size={30} />
+      </View>
+
+    </View>
+
+  )
+}
+
+export default HelloWorldApp;

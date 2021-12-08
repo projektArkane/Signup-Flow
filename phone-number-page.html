@@ -79,7 +79,7 @@
                     <form id="form" action="#">
                          <input type="text" value="+91 I" id="phi" disabled />
                          <input id="phone-number-input" class="username-input phone" type="text"
-                              placeholder="Phone Number" name="phone" maxlength="10" pattern="[0-9]{10}">
+                              placeholder="Phone Number"  pattern="[0-9]{10}" name="phone" maxlength="10" required>
                          <div id="error-msg"></div>
 
                          <div id="btn">
@@ -117,26 +117,36 @@
           const number = document.getElementById("phone-number-input");
           const form = document.getElementById("form");
           const errorElement = document.getElementById("error-msg");
+          const button = document.getElementById("summit");
+          
+          console.log(button.innerHTML);
 
-          // number.onchange = handleChange;
-
-          // function handleChange(e) {
-          //      errorElement.innerText = "nice";
-          // }
-
-          form.addEventListener("submit", (e) => {
-               if (number.value.toString().length < 10) {
-                    e.preventDefault();
-                    errorElement.innerText = "Enter a valid phone number";
+          number.addEventListener("keyup", (e) => {
+               const value = e.currentTarget.value;
+               console.log(value);
+               // console.log(/^([0-9]{10})$/.test(value));
+               // console.log(value.toString().length);
+               if(value === "" || value.toString().length < 10) {
                     number.style.borderColor = "red";
+                    errorElement.innerText = "Enter a valid phone number";
+               } else {
+                    number.style.borderColor = "black";
+                    errorElement.innerText = "";
                }
 
-               if (number.value.toString().length == 10) {
-                    
+               if((/^([0-9]{10})$/.test(value)) == true) {
+
+                    number.style.borderColor = "Green";
                }
+          });
 
+          // form.addEventListener("submit", (e) => {
+          //      if (number.value.toString().length < 10) {
+          //           e.preventDefault();
+          //      } else {
 
-          })
+          //      }
+          // });
      </script>
 </body>
 

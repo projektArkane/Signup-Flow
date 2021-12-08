@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          #btn {
+               /* margin-top: 30px; */
+               /* margin-bottom: 20px; */
+               /* display: flex; */
+               /* justify-content: center; */
+               /* align-items: center; */
+               color: white;
+               /* color: black; */
+               /* width: 90%; */
+               /* height: 50px; */
+               /* border-radius: 25px; */
+               background-color: black;
+               cursor: pointer;
+          }
+
+          #input {
+               /* all: unset; */
+               border: 1px solid black;
+               border-radius: 5px;
+               /* box-shadow: none; */
+               
+               outline: none;
+          }
+
+     </style>
+</head>
+
+<body>
+     <form action="#">
+          <input id="input" type="text" placeholder="type..." maxlength="10" pattern="[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}"
+          title="Please enter valid PAN number. E.g. AAAAA9999A" placeholder="Enter PAN" required>\
+          <div id="error"></div>
+          <button id="btn" type="submit">Submit</button>
+     </form>
+
+     <script>
+          const input = document.getElementById("input");
+          const button = document.getElementById("btn");
+          const error = document.getElementById("error");
+
+          button.disabled = true;
+          button.style.backgroundColor = "grey";
+
+          input.addEventListener("keyup", (e) => {
+               const value = e.currentTarget.value;
+               // button.disabled = "true";
+
+               if(value !== "") {
+                    button.disabled = false;
+                    input.style.borderColor = "black";
+                    button.style.backgroundColor = "black";
+                    error.innerHTML = "";
+               } else {
+                    button.disabled = true;
+                    // input.style.outline = none;
+                    input.style.borderColor = "red";
+                    error.innerHTML = "error";
+                    button.style.backgroundColor = "grey";
+
+               }
+          });
+     </script>
+</body>
+
+</html>
